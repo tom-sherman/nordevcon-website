@@ -1,7 +1,7 @@
 const withCSS = require("@zeit/next-css");
 
 const nextConfig = {
-  target: "serverless",
+  target: "server",
   env: {
     AIRTABLE_API_KEY: process.env.AIRTABLE_API_KEY
   },
