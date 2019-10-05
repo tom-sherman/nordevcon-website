@@ -9,7 +9,7 @@ const nextConfig = {
 
     if (dev) {
       config.module.rules.push({
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: 'eslint-loader',
         exclude: ['/node_modules/', '/.next/'],
         enforce: 'pre',
