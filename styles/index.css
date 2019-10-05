@@ -1,8 +1,16 @@
-@import './button.css';
+@import "./button.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fixed {
+  position: fixed;
+}
 
 .hero {
   width: 100%;
