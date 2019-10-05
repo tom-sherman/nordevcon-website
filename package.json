@@ -14,7 +14,17 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
+    "babel-eslint": "^10.0.3",
     "cssnano": "^3.10.0",
+    "eslint": "^6.5.1",
+    "eslint-config-react-app": "5.0.2",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-cypress": "^2.7.0",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "postcss-easy-import": "^3.0.0",
     "tailwindcss": "^1.0.1"
   }
