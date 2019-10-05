@@ -1,7 +1,5 @@
 import Layout from "../layouts/main";
 
-let test = 'dsfsfdsf';
-
 export default () => (
   <Layout>
     <section className="p-6" id="hero">
