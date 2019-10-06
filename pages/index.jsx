@@ -1,7 +1,17 @@
-import Layout from "../layouts/main";
 import * as airtable from "../api/airtable";
+import Layout from "../layouts/main";
+import Speaker from "../components/Speaker";
 
-function IndexRoute({ speakers }) {
+function simpleSort(a, b) {
+  if (a.fields.Name < b.fields.Name) return -1;
+  if (a.fields.Name > b.fields.Name) return 1;
+  return 0;
+}
+
+function IndexRoute({
+  speakers,
+  schedule = [{ id: "rec47JXtfk3TUD96G", fields: { Title: "talk title" } }]
+}) {
   return (
     <Layout>
       <section className="p-6" id="hero">
@@ -21,10 +31,21 @@ function IndexRoute({ speakers }) {
       </section>
       <section className="p-6" id="speakers">
         <h1 className="text-6xl font-bold">Speakers</h1>
-        <ul>
-          {speakers.map(speaker => (
-            <div key={speaker.id}>{speaker.fields.Name}</div>
-          ))}
+        <ul className="flex flex-initial">
+          {speakers
+            .filter(speaker => speaker.fields.Keynote === true)
+            .sort(simpleSort)
+            .map(speaker => (
+              <Speaker key={speaker.id} speaker={speaker} schedule={schedule} />
+            ))}
+        </ul>
+        <ul className="flex flex-initial">
+          {speakers
+            .filter(speaker => speaker.fields.Keynote !== true)
+            .sort(simpleSort)
+            .map(speaker => (
+              <Speaker key={speaker.id} speaker={speaker} schedule={schedule} />
+            ))}
         </ul>
       </section>
       <section className="p-6" id="schedule">
@@ -51,7 +72,8 @@ function IndexRoute({ speakers }) {
 }
 
 IndexRoute.getInitialProps = async () => {
-  const speakers = await airtable.getSpeakers();
+  const [speakers] = await Promise.all([airtable.getSpeakers()]);
+
   return { speakers: speakers.data.records };
 };
 
