@@ -1,17 +1,23 @@
+const keynoteStyles = {
+  container: "w-full md:w-1/2 flex pb-6 flex-grow-0",
+  image: "w-1/2 rounded-full self-start p-2 md:p-4 lg:p-6 ",
+  details: "pl-4 pr-4 self-center",
+  name: "text-2xl font-bold block",
+  role: "text-gray-600",
+  bio: "text-sm pt-4"
+};
+
+const speakerStyles = {
+  container: "w-1/3 md:w-1/4 lg:w-1/6 p-2 mb-6",
+  image: "rounded-full mb-4",
+  details: "",
+  name: "text-center block font-bold ",
+  role: "text-center block text-sm text-gray-600",
+  bio: "mt-2 text-sm"
+};
+
 function Speaker({ speaker, schedule }) {
   const isKeynote = speaker.fields.Keynote;
-
-  const keynoteStyles = {
-    container: "max-w-xs",
-    image: "max-w-xs rounded-full",
-    name: "text-2xl font-bold block ml-4 pt-8"
-  };
-
-  const speakerStyles = {
-    container: "w-20",
-    image: "rounded-full w-12",
-    name: ""
-  };
 
   return (
     <li
@@ -22,15 +28,57 @@ function Speaker({ speaker, schedule }) {
         src="https://placekitten.com/420/420"
         alt={speaker.fields.Name}
       />
-      <div>
+      <div
+        className={isKeynote ? keynoteStyles.details : speakerStyles.details}
+      >
         <span className={isKeynote ? keynoteStyles.name : speakerStyles.name}>
           {speaker.fields.Name}
         </span>
-        <span className="text-xl block ml-4 text-gray-600 ">
+        <span className={isKeynote ? keynoteStyles.role : speakerStyles.role}>
           {speaker.fields.Role}{" "}
           {speaker.fields.Company ? `at ${speaker.fields.Company}` : ""}
-          {speaker.fields.Bio}
         </span>
+        <p className={isKeynote ? keynoteStyles.bio : speakerStyles.bio}>
+          {speaker.fields.Bio}
+        </p>
+        <ul className="pt-2 flex">
+          {speaker.fields.Twitter && (
+            <li>
+              <a
+                href={speaker.fields.Twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm pr-2 text-blue-500 hover:text-blue-700"
+              >
+                Twitter
+              </a>
+            </li>
+          )}
+          {speaker.fields.LinkedIn && (
+            <li>
+              <a
+                href={speaker.fields.LinkedIn}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm pr-2 text-blue-500 hover:text-blue-700"
+              >
+                LinkedIn
+              </a>
+            </li>
+          )}
+          {speaker.fields.Website && (
+            <li>
+              <a
+                href={speaker.fields.Website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm pr-2 text-blue-500 hover:text-blue-700"
+              >
+                Website
+              </a>
+            </li>
+          )}
+        </ul>
       </div>
     </li>
   );

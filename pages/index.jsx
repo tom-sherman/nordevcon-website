@@ -31,7 +31,7 @@ function IndexRoute({
       </section>
       <section className="p-6" id="speakers">
         <h1 className="text-6xl font-bold">Speakers</h1>
-        <ul className="flex flex-initial">
+        <ul className="flex flex-wrap">
           {speakers
             .filter(speaker => speaker.fields.Keynote === true)
             .sort(simpleSort)
@@ -39,7 +39,7 @@ function IndexRoute({
               <Speaker key={speaker.id} speaker={speaker} schedule={schedule} />
             ))}
         </ul>
-        <ul className="flex flex-initial">
+        <ul className="flex flex-wrap">
           {speakers
             .filter(speaker => speaker.fields.Keynote !== true)
             .sort(simpleSort)
