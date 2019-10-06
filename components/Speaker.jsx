@@ -1,8 +1,8 @@
 const keynoteStyles = {
   container: "w-full md:w-1/2 flex pb-6 flex-grow-0",
   image:
-    "w-1/2 md:w-1/3 rounded-lg self-start  border border-gray-300 shadow-lg",
-  details: "pl-5 pr-5",
+    "w-1/3 md:w-1/3 rounded-lg self-start mr-3 border border-gray-300 shadow-lg rounded-full",
+  details: "",
   name: "text-2xl font-bold block",
   role: "text-gray-600",
   bio: "text-sm pt-4"
