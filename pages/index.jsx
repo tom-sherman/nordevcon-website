@@ -83,7 +83,7 @@ function IndexRoute({
         </ul>
       </section>
 
-      <section className="p-3" id="schedule">
+      <section className="container mx-auto px-4" id="schedule">
         <h1 className="text-6xl font-bold">Schedule</h1>
         <Schedule schedule={schedule} speakers={speakers} />
       </section>
