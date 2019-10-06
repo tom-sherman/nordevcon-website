@@ -91,12 +91,16 @@ function Sponsorship() {
             conference, Norfolk Developers and the Norfolk tech community.
           </em>
         </p>
-        <SponsorshipBox sponsorship={PACKAGES.elite} />
-        <SponsorshipBox sponsorship={PACKAGES.partner} />
-        <SponsorshipBox sponsorship={PACKAGES.associate} />
-        <SponsorshipBox sponsorship={PACKAGES.refreshments} />
-        <SponsorshipBox sponsorship={PACKAGES.lunch} />
-        <SponsorshipBox sponsorship={PACKAGES.dinner} />
+        <div className="flex flex-wrap items-stretch">
+          <SponsorshipBox sponsorship={PACKAGES.elite} />
+          <SponsorshipBox sponsorship={PACKAGES.partner} />
+          <SponsorshipBox sponsorship={PACKAGES.associate} />
+        </div>
+        <div className="flex flex-wrap">
+          <SponsorshipBox sponsorship={PACKAGES.refreshments} />
+          <SponsorshipBox sponsorship={PACKAGES.lunch} />
+          <SponsorshipBox sponsorship={PACKAGES.dinner} />
+        </div>
       </section>
     </Layout>
   );
@@ -104,14 +108,20 @@ function Sponsorship() {
 
 function SponsorshipBox({ sponsorship }) {
   return (
-    <div className="shadow-lg">
-      <h2>{sponsorship.title}</h2>
-      <span>{sponsorship.price}</span>
-      <ul>
-        {sponsorship.features.map(item => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+    <div className="p-4 w-full sm:w-1/2 md:w-1/3 flex">
+      <div className=" shadow-lg border mb-4 rounded-lg p-4 w-full border">
+        <h2 className="text-lg font-bold">{sponsorship.title}</h2>
+        <span className="text-md font-bold text-gray-600">
+          {sponsorship.price}
+        </span>
+        <ul className="list-disc pl-4">
+          {sponsorship.features.map(item => (
+            <li key={item} className="pt-2 text-sm">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
