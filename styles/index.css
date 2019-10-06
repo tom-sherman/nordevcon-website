@@ -28,12 +28,5 @@ a {
 @media (min-width: 640px) {
   #hero {
     background-image: url('/static/images/hero-full.png');
-    clip-path: url(#hero-clip-path);
-  }
-}
-
-@media (min-width: 1920px) {
-  #hero {
-    clip-path: none;
   }
 }

@@ -1,5 +1,6 @@
 import * as airtable from "../api/airtable";
 import Layout from "../layouts/main";
+import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import Speaker from "../components/Speaker";
 
@@ -16,6 +17,8 @@ function IndexRoute({
   return (
     <Layout>
       <Hero speakers={speakers} />
+
+      <Navigation />
 
       <section className="p-4 md:p-8 lg:p-12" id="speakers">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
