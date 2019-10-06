@@ -2,6 +2,11 @@
 
 @tailwind base;
 @tailwind components;
+
+body {
+  @apply bg-purple-100;
+}
+
 @tailwind utilities;
 
 html {
