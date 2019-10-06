@@ -1,6 +1,7 @@
 import * as airtable from "../api/airtable";
 import Layout from "../layouts/main";
 import Speaker from "../components/Speaker";
+import Schedule from "../components/Schedule";
 
 function simpleSort(a, b) {
   if (a.fields.Name < b.fields.Name) return -1;
@@ -8,9 +9,18 @@ function simpleSort(a, b) {
   return 0;
 }
 
+const groupByStartDate = (groups, event) => {
+  let {Start} = event.fields;
+
+  if (groups[Start] == null) groups[Start] = [];
+  groups[Start].push(event);
+
+  return groups;
+}
+
 function IndexRoute({
   speakers,
-  schedule = [{ id: "rec47JXtfk3TUD96G", fields: { Title: "talk title" } }]
+  schedule
 }) {
   return (
     <Layout>
@@ -75,10 +85,7 @@ function IndexRoute({
 
       <section className="p-3" id="schedule">
         <h1 className="text-6xl font-bold">Schedule</h1>
-        <ul>
-          <li>talk</li>
-          <li>talk</li>
-        </ul>
+        <Schedule schedule={schedule} speakers={speakers} />
       </section>
 
       <section className="p-3" id="location">
@@ -98,9 +105,15 @@ function IndexRoute({
 }
 
 IndexRoute.getInitialProps = async () => {
-  const [speakers] = await Promise.all([airtable.getSpeakers()]);
+  const [speakers, schedule] = await Promise.all([
+    airtable.getSpeakers(),
+    airtable.getSchedule()
+  ]);
 
-  return { speakers: speakers.data.records };
+  return {
+    speakers: speakers.data.records,
+    schedule: schedule.data.records.reduce(groupByStartDate, {})
+  };
 };
 
 export default IndexRoute;
