@@ -8,10 +8,10 @@ const keynoteStyles = {
 };
 
 const speakerStyles = {
-  container: "w-1/3 md:w-1/4 lg:w-1/6 p-2 mb-6",
+  container: "w-1/3 md:w-1/4 lg:w-1/6 p-2 mb-12",
   image: "rounded-full mb-4",
   details: "",
-  name: "text-center block font-bold ",
+  name: "text-center block font-bold",
   role: "text-center block text-sm text-gray-600",
   bio: "mt-2 text-sm"
 };
