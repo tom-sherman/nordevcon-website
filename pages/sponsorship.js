@@ -1,9 +1,11 @@
+import Link from "next/link";
 import Layout from "../layouts/main";
 
 const PACKAGES = {
   elite: {
     price: "£3,300",
     title: "Elite",
+    available: false,
     features: [
       "Logo on website",
       "Logo in opening presentation",
@@ -21,6 +23,7 @@ const PACKAGES = {
   partner: {
     title: "Partner",
     price: "£1,600",
+    available: true,
     features: [
       "Logo on website",
       "Logo in opening presentation",
@@ -36,6 +39,7 @@ const PACKAGES = {
   associate: {
     title: "Associate",
     price: "£275",
+    available: true,
     features: [
       "Logo on website",
       "Logo in opening presentation",
@@ -45,8 +49,9 @@ const PACKAGES = {
     ]
   },
   refreshments: {
-    title: "Refresments",
-    price: "£2400",
+    title: "Refreshments",
+    price: "£2,400",
+    available: true,
     features: [
       "Sponsor tea, coffee",
       "Acknowledgment in programme and 2 x A4 banners on tea and coffee station",
@@ -56,7 +61,8 @@ const PACKAGES = {
   },
   lunch: {
     title: "Lunch",
-    price: "£2900",
+    price: "£2,900",
+    available: true,
     features: [
       "A4 banner on lunch tables",
       "Serving staff wear your t-shirt message",
@@ -66,11 +72,28 @@ const PACKAGES = {
   },
   dinner: {
     title: "Conference Dinner",
-    price: "£2800",
+    price: "£2,800",
+    available: true,
     features: [
       "Five minute introduction before dinner",
       "Logo on placecards/card in lanyard",
       "Space for two small banners at entrance"
+    ]
+  },
+  roomConference: {
+    title: "Thursday 27th & Friday 28th February",
+    price: "",
+    available: true,
+    features: [
+      "Brand the room",
+      "Name the room",
+      "",
+      "Main Auditorium – £1000",
+      "Conference Room 1 – £500",
+      "Conference Room 2 – £450",
+      "Training Room 1 – £370",
+      "Boardroom 1 – £350",
+      "Charging Room – £300"
     ]
   }
 };
@@ -82,24 +105,53 @@ function Sponsorship() {
         <h1 className="text-2xl font-bold">Sponsorship</h1>
         <p className="text-sm pb-4">
           nor(DEV):con is a <strong>not-for-profit event</strong> which relies
-          on sponsorship to keep going. We list a number of opportunities to
-          help support us below. Choose how you'd like to be involved.
+          on sponsorship to continue. We list a number of opportunities to
+          contribute to the community below. Choose how you'd like to be
+          involved.
         </p>
-        <p className="text-sm pb-4">
+        <p className="text-gray-600 mb-4">
           <em>
             Any money made from the conference is invested back into the
             conference, Norfolk Developers and the Norfolk tech community.
           </em>
         </p>
-        <div className="flex flex-wrap items-stretch">
-          <SponsorshipBox sponsorship={PACKAGES.elite} />
+      </section>
+      <section className="p-6">
+        <h2 className="text-xl font-bold mt-6">Main Sponsorship Packages</h2>
+        <p className="text-gray-600 mb-4">
+          Your chance to be involved in Norfolk Developers Conference 2020.
+        </p>
+        <div className="flex flex-wrap items-stretch -ml-4 -mr-4">
           <SponsorshipBox sponsorship={PACKAGES.partner} />
+          <SponsorshipBox sponsorship={PACKAGES.elite} />
           <SponsorshipBox sponsorship={PACKAGES.associate} />
         </div>
-        <div className="flex flex-wrap">
+      </section>
+      <section className="p-6">
+        <h2 className="text-xl font-bold mt-6">
+          Food/Drink Sponsorship Packages
+        </h2>
+        <p className="text-gray-600 mb-4">
+          Includes a free Associate sponsorship or a £250 discount on a partner
+          or Elite Sponsorship.
+        </p>
+        <div className="flex flex-wrap -ml-4 -mr-4">
           <SponsorshipBox sponsorship={PACKAGES.refreshments} />
           <SponsorshipBox sponsorship={PACKAGES.lunch} />
           <SponsorshipBox sponsorship={PACKAGES.dinner} />
+        </div>
+      </section>
+      <section className="p-6">
+        <h2 className="text-xl font-bold mt-12">Room Sponsorship Packages</h2>
+        <p className="text-gray-600 mb-4">
+          Sponsorship of individual rooms includes the opportunity to{" "}
+          <strong>brand the room</strong> with corporate banners and{" "}
+          <strong>name the room</strong>. All room sponsorships include a free
+          Associate sponsorship or a £275 discount on a partner or Elite
+          Sponsorship.
+        </p>
+        <div className="flex flex-wrap -ml-4 -mr-4">
+          <SponsorshipBox sponsorship={PACKAGES.roomConference} />
         </div>
       </section>
     </Layout>
@@ -108,19 +160,33 @@ function Sponsorship() {
 
 function SponsorshipBox({ sponsorship }) {
   return (
-    <div className="p-4 w-full sm:w-1/2 md:w-1/3 flex">
-      <div className=" shadow-lg border mb-4 rounded-lg p-4 w-full border">
-        <h2 className="text-lg font-bold">{sponsorship.title}</h2>
-        <span className="text-md font-bold text-gray-600">
+    <div className="p-4 w-full md:w-1/2 lg:w-1/3 flex">
+      <div className=" shadow-lg border mb-4 rounded-lg p-4 w-full border flex flex-col">
+        <h2 className="text-lg font-bold text-center block mt-4">
+          {sponsorship.title}
+        </h2>
+        <span className="text-lg font-bold text-purple-600 text-center block mt-4 mb-4">
           {sponsorship.price}
         </span>
-        <ul className="list-disc pl-4">
+        <ul className="pl-4 pb-4 mb-4">
           {sponsorship.features.map(item => (
-            <li key={item} className="pt-2 text-sm">
+            <li key={item} className="pt-2 text-sm text-center text-gray-700">
               {item}
             </li>
           ))}
         </ul>
+        {sponsorship.available && (
+          <Link href="/contact">
+            <a className="bg-white hover:bg-purple-600 p-4 text-purple-500 border-2 border-purple-500 hover:text-white font-bold rounded text-center mt-4 self-bottom mt-auto">
+              Become a sponsor
+            </a>
+          </Link>
+        )}
+        {!sponsorship.available && (
+          <span className="bg-grey-300 p-4 text-gray-500 border-2 border-gray-300 font-bold rounded text-center mt-4 self-bottom mt-auto">
+            No longer available
+          </span>
+        )}
       </div>
     </div>
   );
