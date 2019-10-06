@@ -102,22 +102,22 @@ function Sponsorship() {
   return (
     <Layout>
       <section className="p-6 pt-12" id="hero">
-        <h1 className="text-2xl font-bold">Sponsorship</h1>
-        <p className="text-sm pb-4">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          Sponsorship
+        </h1>
+        <p className="pb-4">
           nor(DEV):con is a <strong>not-for-profit event</strong> which relies
           on sponsorship to continue. We list a number of opportunities to
           contribute to the community below. Choose how you'd like to be
           involved.
         </p>
-        <p className="text-gray-600 mb-4">
-          <em>
-            Any money made from the conference is invested back into the
-            conference, Norfolk Developers and the Norfolk tech community.
-          </em>
+        <p className="pb-4">
+          Any money made from the conference is invested back into the
+          conference, Norfolk Developers and the Norfolk tech community.
         </p>
       </section>
       <section className="p-6">
-        <h2 className="text-xl font-bold mt-6">Main Sponsorship Packages</h2>
+        <h2 className="text-xl font-bold">Main Sponsorship Packages</h2>
         <p className="text-gray-600 mb-4">
           Your chance to be involved in Norfolk Developers Conference 2020.
         </p>
@@ -142,7 +142,7 @@ function Sponsorship() {
         </div>
       </section>
       <section className="p-6">
-        <h2 className="text-xl font-bold mt-12">Room Sponsorship Packages</h2>
+        <h2 className="text-xl font-bold mt-6">Room Sponsorship Packages</h2>
         <p className="text-gray-600 mb-4">
           Sponsorship of individual rooms includes the opportunity to{" "}
           <strong>brand the room</strong> with corporate banners and{" "}
@@ -162,10 +162,10 @@ function SponsorshipBox({ sponsorship }) {
   return (
     <div className="p-4 w-full md:w-1/2 lg:w-1/3 flex">
       <div className=" shadow-lg border mb-4 rounded-lg p-4 w-full border flex flex-col">
-        <h2 className="text-lg font-bold text-center block mt-4">
+        <h2 className="text-2xl font-bold text-center block mt-4 text-purple-600">
           {sponsorship.title}
         </h2>
-        <span className="text-lg font-bold text-purple-600 text-center block mt-4 mb-4">
+        <span className="text-lg font-bold text-gray-600 text-center block mt-4 mb-4">
           {sponsorship.price}
         </span>
         <ul className="pl-4 pb-4 mb-4">
