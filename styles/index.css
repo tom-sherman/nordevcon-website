@@ -11,3 +11,17 @@ html {
 a {
   transition: all 0.25s;
 }
+
+#hero {
+  background-image: url('/static/images/hero-mobile.png');
+  background-size: cover;
+  background-position: center;
+  background-color: #422D54;
+  background-blend-mode: multiply;
+}
+
+@media (min-width: 640px) {
+  #hero {
+    background-image: url('/static/images/hero-full.png');
+  }
+}

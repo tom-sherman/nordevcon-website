@@ -24,7 +24,7 @@ function Layout({ children, title }) {
       </Head>
 
       <Navigation />
-      <main className="pt-8">{children}</main>
+      <main>{children}</main>
       <footer className="p-6">Links, etc. Norfolk Developers</footer>
     </>
   );
