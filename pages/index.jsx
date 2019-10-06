@@ -14,10 +14,14 @@ function IndexRoute({
 }) {
   return (
     <Layout>
-      <section className="p-6" id="hero">
-        <p className="text-6xl font-bold">NOR(DEV):CON</p>
-        <h1 className="text-3xl">Norfolk Developers Conference</h1>
-        <p className="text-3xl">
+      <section className="p-6 pt-12" id="hero">
+        <p className="text-2xl md:text-4xl lg:text-5xl font-bold">
+          NOR(DEV):CON
+        </p>
+        <h1 className="text-xl md:text-2xl lg:text-3xl text-gray-600">
+          Norfolk Developers Conference
+        </h1>
+        <p className="text-md md:text-xl lg:text-2xl mb-4">
           26<sup>th</sup> &ndash; 28<sup>th</sup> February 2020
         </p>
         <button className="bg-red-500 text-white p-3">Get tickets</button>
