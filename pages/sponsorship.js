@@ -148,7 +148,7 @@ function Sponsorship() {
           <strong>brand the room</strong> with corporate banners and{" "}
           <strong>name the room</strong>. All room sponsorships include a free
           Associate sponsorship or a £275 discount on a partner or Elite
-          Sponsorship.
+          sponsorship.
         </p>
         <div className="flex flex-wrap -ml-4 -mr-4">
           <SponsorshipBox sponsorship={PACKAGES.roomConference} />
