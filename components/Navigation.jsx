@@ -1,10 +1,10 @@
 const links = [
-  { href: "#hero", label: "Home" },
-  { href: "#speakers", label: "Speakers" },
-  { href: "#schedule", label: "Schedule" },
-  { href: "#location", label: "Location" },
-  { href: "#nearby", label: "Information" },
-  { href: "#sponsors", label: "Sponsors" }
+  { href: "/#hero", label: "Home" },
+  { href: "/#speakers", label: "Speakers" },
+  { href: "/#schedule", label: "Schedule" },
+  { href: "/#location", label: "Location" },
+  { href: "/#nearby", label: "Information" },
+  { href: "/#sponsors", label: "Sponsors" }
 ];
 
 export default function Navgation() {
