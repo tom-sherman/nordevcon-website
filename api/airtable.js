@@ -18,3 +18,7 @@ async function callAPI(endpoint, body = null) {
 export async function getSpeakers() {
   return callAPI("/Speakers");
 }
+
+export async function getSchedule() {
+  return callAPI("/Schedule");
+}
