@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Navigation from "../components/Navigation";
 
 function Layout({ children, title }) {
   return (
@@ -23,8 +22,7 @@ function Layout({ children, title }) {
         />
       </Head>
 
-      <Navigation />
-      <main className="pt-8">{children}</main>
+      <main>{children}</main>
       <footer className="p-6">Links, etc. Norfolk Developers</footer>
     </>
   );
