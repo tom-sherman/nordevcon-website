@@ -1,12 +1,6 @@
 import * as airtable from "../api/airtable";
 import Layout from "../layouts/main";
-import Speaker from "../components/Speaker";
-
-function simpleSort(a, b) {
-  if (a.fields.Name < b.fields.Name) return -1;
-  if (a.fields.Name > b.fields.Name) return 1;
-  return 0;
-}
+import Speakers from "../components/Speakers";
 
 function IndexRoute({
   speakers,
@@ -55,27 +49,7 @@ function IndexRoute({
         src="/static/images/bg.svg"
         alt="background"
       />
-      <section className="p-4 md:p-8 lg:p-12" id="speakers">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-          Speakers
-        </h1>
-        <ul className="flex flex-wrap mb-2 lg:mb-4 ">
-          {speakers
-            .filter(speaker => speaker.fields.Keynote === true)
-            .sort(simpleSort)
-            .map(speaker => (
-              <Speaker key={speaker.id} speaker={speaker} schedule={schedule} />
-            ))}
-        </ul>
-        <ul className="flex flex-wrap -ml-4 -mr-4">
-          {speakers
-            .filter(speaker => speaker.fields.Keynote !== true)
-            .sort(simpleSort)
-            .map(speaker => (
-              <Speaker key={speaker.id} speaker={speaker} schedule={schedule} />
-            ))}
-        </ul>
-      </section>
+      <Speakers speakers={speakers} />
 
       <section className="p-3" id="schedule">
         <h1 className="text-6xl font-bold">Schedule</h1>
