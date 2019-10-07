@@ -9,7 +9,7 @@ const links = [
 
 export default function Navgation() {
   return (
-    <nav className="p-6 bg-white opacity-75 md:sticky md:top-0">
+    <nav className="p-6 bg-white opacity-75 md:sticky md:top-0 overflow-x-auto">
       <div className="container mx-auto">
         {links.map((link, index) => (
           <a key={index} className="p-3" href={link.href}>
