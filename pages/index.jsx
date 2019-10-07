@@ -50,7 +50,11 @@ function IndexRoute({
           </div>
         </div>
       </section>
-
+      <img
+        style={{ position: "absolute", zIndex: -1, width: "100%" }}
+        src="/static/images/bg.svg"
+        alt="background"
+      />
       <section className="p-4 md:p-8 lg:p-12" id="speakers">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
           Speakers
