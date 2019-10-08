@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Layout from "../layouts/main";
+import Navigation from "../components/Navigation";
 
 const PACKAGES = {
   elite: {
@@ -101,7 +102,8 @@ const PACKAGES = {
 function Sponsorship() {
   return (
     <Layout>
-      <section className="p-6 pt-12" id="hero">
+      <Navigation />
+      <section className="container mx-auto pt-12" id="intro">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
           Sponsorship
         </h1>
@@ -116,7 +118,7 @@ function Sponsorship() {
           conference, Norfolk Developers and the Norfolk tech community.
         </p>
       </section>
-      <section className="p-6">
+      <section className="container mx-auto">
         <h2 className="text-xl font-bold">Main Sponsorship Packages</h2>
         <p className="text-gray-600 mb-4">
           Your chance to be involved in Norfolk Developers Conference 2020.
