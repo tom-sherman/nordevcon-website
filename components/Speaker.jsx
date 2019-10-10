@@ -1,4 +1,4 @@
-const s3 = "https://norfolkdevelopers.s3.eu-west-2.amazonaws.com/nordevcon-website";
+const s3 = "https://norfolkdevelopers.s3.eu-west-2.amazonaws.com/nordevcon-website/images";
 
 const keynoteStyles = {
   container: "w-full md:w-1/2 flex pb-6 flex-grow-0 md:mb-6 lg:mb-12",
