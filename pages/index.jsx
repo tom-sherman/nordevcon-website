@@ -21,19 +21,22 @@ function IndexRoute({ speakers, schedule }) {
       <Navigation />
       <Speakers speakers={speakers} />
 
-      <section className="container mx-auto px-3" id="schedule">
+      <section className="section" id="schedule">
         <h1 className="text-6xl font-bold">Schedule</h1>
         <Schedule schedule={schedule} speakers={speakers} />
       </section>
-      <section className="p-3" id="location">
+
+      <section className="section" id="location">
         <h1 className="text-6xl font-bold">Location</h1>
         <p>map and directions</p>
       </section>
-      <section className="p-3" id="nearby">
+
+      <section className="section" id="nearby">
         <h1 className="text-6xl font-bold">Useful things nearby</h1>
         <p>Train station, bus station, taxi numbers, services etc.</p>
       </section>
-      <section className="p-3" id="sponsors">
+
+      <section className="section" id="sponsors">
         <h1>Sponsors</h1>
         <p>Our wonderful sponsors</p>
       </section>

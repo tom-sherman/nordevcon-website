@@ -7,6 +7,9 @@ module.exports = {
       minWidth: theme => ({
         'sm': theme('screens.xs'),
       }),
+      maxWidth: {
+        '7xl': '80rem',
+      }
     }
   },
   variants: {},
