@@ -19,7 +19,7 @@ function Speakers({ speakers }) {
         src="/static/images/bg.svg"
         alt="background"
       />
-      <section className="container mx-auto mt-12" id="speakers">
+      <section className="section" id="speakers">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
           Speakers
         </h1>
