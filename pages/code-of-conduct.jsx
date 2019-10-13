@@ -6,7 +6,7 @@ function CodeOfConductRoute() {
     <Layout>
       <Navigation />
 
-      <section className="container mx-auto pt-12" id="code-of-conduct">
+      <section className="section pt-12" id="code-of-conduct">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Code of Conduct</h1>
 
         <div id="short-version" className="mt-8 text-lg">
