@@ -103,7 +103,7 @@ function Sponsorship() {
   return (
     <Layout>
       <Navigation />
-      <section className="container mx-auto pt-12" id="intro">
+      <section className="section pt-12" id="intro">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
           Sponsorship
         </h1>
@@ -118,7 +118,7 @@ function Sponsorship() {
           conference, Norfolk Developers and the Norfolk tech community.
         </p>
       </section>
-      <section className="container mx-auto">
+      <section className="section">
         <h2 className="text-xl font-bold">Main Sponsorship Packages</h2>
         <p className="text-gray-600 mb-4">
           Your chance to be involved in Norfolk Developers Conference 2020.
@@ -129,7 +129,7 @@ function Sponsorship() {
           <SponsorshipBox sponsorship={PACKAGES.associate} />
         </div>
       </section>
-      <section className="p-6">
+      <section className="section">
         <h2 className="text-xl font-bold mt-6">
           Food/Drink Sponsorship Packages
         </h2>
@@ -143,7 +143,7 @@ function Sponsorship() {
           <SponsorshipBox sponsorship={PACKAGES.dinner} />
         </div>
       </section>
-      <section className="p-6">
+      <section className="section">
         <h2 className="text-xl font-bold mt-6">Room Sponsorship Packages</h2>
         <p className="text-gray-600 mb-4">
           Sponsorship of individual rooms includes the opportunity to{" "}
