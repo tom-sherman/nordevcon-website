@@ -83,12 +83,11 @@ const PACKAGES = {
   },
   roomConference: {
     title: "Thursday 27th & Friday 28th February",
-    price: "",
+    price: "from £300",
     available: true,
     features: [
       "Brand the room",
       "Name the room",
-      "",
       "Main Auditorium – £1000",
       "Conference Room 1 – £500",
       "Conference Room 2 – £450",
@@ -163,32 +162,37 @@ function Sponsorship() {
 function SponsorshipBox({ sponsorship }) {
   return (
     <div className="p-4 w-full md:w-1/2 lg:w-1/3 flex">
-      <div className=" shadow-lg border mb-4 rounded-lg p-4 w-full border flex flex-col">
-        <h2 className="text-2xl font-bold text-center block mt-4 text-purple-600">
-          {sponsorship.title}
-        </h2>
-        <span className="text-lg font-bold text-gray-600 text-center block mt-4 mb-4">
-          {sponsorship.price}
-        </span>
-        <ul className="pl-4 pb-4 mb-4">
-          {sponsorship.features.map(item => (
-            <li key={item} className="pt-2 text-sm text-center text-gray-700">
-              {item}
-            </li>
-          ))}
-        </ul>
-        {sponsorship.available && (
-          <Link href="/contact">
-            <a className="bg-white hover:bg-purple-600 p-4 text-purple-500 border-2 border-purple-500 hover:text-white font-bold rounded text-center mt-4 self-bottom mt-auto">
-              Become a sponsor
-            </a>
-          </Link>
-        )}
-        {!sponsorship.available && (
-          <span className="bg-grey-300 p-4 text-gray-500 border-2 border-gray-300 font-bold rounded text-center mt-4 self-bottom mt-auto">
-            No longer available
+      <div className="bg-white shadow-lg border mb-4 rounded-lg w-full border flex flex-col overflow-hidden">
+        <header class="p-4 bg-purple-600 text-white">
+          <h2 className="block text-2xl font-bold text-center">
+            {sponsorship.title}
+          </h2>
+        </header>
+
+        <div class="p-4 flex flex-col flex-grow">
+          <span className="text-2xl font-bold text-purple-600 text-center block mt-4 mb-4">
+            {sponsorship.price}
           </span>
-        )}
+          <ul className="pl-4 pb-4 mb-4 flex-grow list-disc">
+            {sponsorship.features.map(item => (
+              <li key={item} className="pt-2 text-sm text-gray-700">
+                {item}
+              </li>
+            ))}
+          </ul>
+          {sponsorship.available && (
+            <Link href="/contact">
+              <a className="bg-white p-4 text-purple-500 border-2 border-purple-500 hover:bg-purple-600 hover:text-white font-bold rounded text-center mt-4">
+                Become a sponsor
+              </a>
+            </Link>
+          )}
+          {!sponsorship.available && (
+            <span className="bg-grey-300 p-4 text-gray-500 border-2 border-gray-300 font-bold rounded text-center mt-4">
+              No longer available
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );
