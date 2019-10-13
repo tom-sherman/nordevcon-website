@@ -21,7 +21,7 @@ function IndexRoute({ speakers, schedule }) {
       <Navigation />
       <Speakers speakers={speakers} />
 
-      <section className="section" id="schedule">
+      <section className="section bg-white" id="schedule">
         <h1 className="text-6xl font-bold">Schedule</h1>
         <Schedule schedule={schedule} speakers={speakers} />
       </section>
