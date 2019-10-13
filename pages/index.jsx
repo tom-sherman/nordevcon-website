@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import Speakers from "../components/Speakers";
 import Schedule from "../components/Schedule";
 import StaticMap from "../components/MapboxStaticMap";
+import Nearby from "../components/Nearby";
 
 const groupByStartDate = (groups, event) => {
   let { Start } = event.fields;
@@ -81,8 +82,9 @@ function IndexRoute({ speakers, schedule }) {
       </section>
 
       <section className="section" id="nearby">
-        <h1 className="text-6xl font-bold">Useful things nearby</h1>
-        <p>Train station, bus station, taxi numbers, services etc.</p>
+        <h1 className="text-6xl font-bold">Nearby</h1>
+
+        <Nearby />
       </section>
 
       <section className="section" id="sponsors">
