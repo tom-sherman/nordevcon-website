@@ -42,7 +42,9 @@ function IndexRoute({ speakers, schedule }) {
         <h1>Sponsors</h1>
         <p>Our wonderful sponsors</p>
         <Link href="/sponsorship">
-          <a>Become a sponsor</a>
+          <a className="inline-block bg-white hover:bg-purple-600 p-4 text-purple-500 border-2 border-purple-500 hover:text-white font-bold rounded text-center mt-4 self-bottom mt-auto">
+            Become a sponsor
+          </a>
         </Link>
       </section>
     </Layout>
