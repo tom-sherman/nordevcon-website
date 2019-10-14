@@ -3,7 +3,8 @@ const withCSS = require("@zeit/next-css");
 const nextConfig = {
   target: "serverless",
   env: {
-    AIRTABLE_API_KEY: process.env.AIRTABLE_API_KEY
+    AIRTABLE_API_KEY: process.env.AIRTABLE_API_KEY,
+    MAPBOX_API_KEY: process.env.MAPBOX_API_KEY,
   },
   pageExtensions: ["jsx", "js"],
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
