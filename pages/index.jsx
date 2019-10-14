@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import * as airtable from "../api/airtable";
 import Layout from "../layouts/main";
 import Navigation from "../components/Navigation";
@@ -39,6 +41,11 @@ function IndexRoute({ speakers, schedule }) {
       <section className="section" id="sponsors">
         <h1>Sponsors</h1>
         <p>Our wonderful sponsors</p>
+        <Link href="/sponsorship">
+          <a className="inline-block bg-white hover:bg-purple-600 p-4 text-purple-500 border-2 border-purple-500 hover:text-white font-bold rounded text-center mt-4 self-bottom mt-auto">
+            Become a sponsor
+          </a>
+        </Link>
       </section>
     </Layout>
   );
