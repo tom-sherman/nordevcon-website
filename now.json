@@ -1,6 +1,9 @@
 {
   "scope": "norfolkdev",
   "version": 2,
+  "alias": [
+    "nordevcon.com"
+  ],
   "build": {
     "env": {
       "AIRTABLE_API_KEY": "@airtable-api-key",
