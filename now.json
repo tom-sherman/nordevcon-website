@@ -3,7 +3,8 @@
   "version": 2,
   "build": {
     "env": {
-      "AIRTABLE_API_KEY": "@airtable-api-key"
+      "AIRTABLE_API_KEY": "@airtable-api-key",
+      "MAPBOX_API_KEY": "@mapbox-api-key"
     }
   }
 }
