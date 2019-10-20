@@ -1,4 +1,5 @@
-const s3 = "https://norfolkdevelopers.s3.eu-west-2.amazonaws.com/nordevcon-website/images";
+const s3 =
+  "https://norfolkdevelopers.s3.eu-west-2.amazonaws.com/nordevcon-website/images";
 
 const keynoteStyles = {
   container: "w-full md:w-1/2 flex pb-6 flex-grow-0 md:mb-6 lg:mb-12",
@@ -6,7 +7,7 @@ const keynoteStyles = {
     "w-1/3 md:w-1/3 rounded-lg self-start border border-gray-300 shadow-lg rounded-full",
   details: "ml-4 sm:ml-6 sm:mr-6 lg:ml-8 lg:mr-8",
   name: "text-2xl font-bold block",
-  role: "text-gray-600",
+  role: "text-gray-800",
   bio: "text-sm pt-4 md:text-base"
 };
 
@@ -15,7 +16,7 @@ const speakerStyles = {
   image: "rounded-lg mb-4 border border-gray-300 shadow-lg rounded-full",
   details: "pl-2 pr-2",
   name: "text-center block font-bold",
-  role: "text-center block text-gray-600 text-xs",
+  role: "text-center block text-gray-800 text-xs",
   bio: "text-xs"
 };
 

@@ -188,7 +188,7 @@ function SponsorshipBox({ sponsorship }) {
             </Link>
           )}
           {!sponsorship.available && (
-            <span className="bg-grey-300 p-4 text-gray-500 border-2 border-gray-300 font-bold rounded text-center mt-4">
+            <span className="bg-grey-300 p-4 text-gray-700 border-2 border-gray-300 font-bold rounded text-center mt-4">
               No longer available
             </span>
           )}

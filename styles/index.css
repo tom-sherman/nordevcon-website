@@ -32,10 +32,6 @@ input + .btn {
 end @import "./button.css";
 */
 
-body {
-  @apply bg-purple-100;
-}
-
 .section {
   @apply max-w-7xl mx-auto px-3 py-6;
 }

@@ -1,5 +1,6 @@
 const withCSS = require("@zeit/next-css");
-const withPurgeCss = require("next-purgecss");
+const withOffline = require("next-offline");
+const withPurgeCSS = require("next-purgecss");
 
 class TailwindExtractor {
   static extract(content) {
@@ -32,6 +33,27 @@ const nextConfig = {
 
     return config;
   },
+  generateInDevMode: false,
+  workboxOpts: {
+    swDest: "static/service-worker.js",
+    runtimeCaching: [
+      {
+        urlPattern: /^https?.*/,
+        handler: "NetworkFirst",
+        options: {
+          cacheName: "https-calls",
+          networkTimeoutSeconds: 15,
+          expiration: {
+            maxEntries: 150,
+            maxAgeSeconds: 30 * 24 * 60 * 60 // 1 month
+          },
+          cacheableResponse: {
+            statuses: [0, 200]
+          }
+        }
+      }
+    ]
+  },
   purgeCss: {
     extractors: [
       {
@@ -46,4 +68,4 @@ const nextConfig = {
   }
 };
 
-module.exports = withCSS(withPurgeCss(nextConfig));
+module.exports = withOffline(withCSS(withPurgeCSS(nextConfig)));
