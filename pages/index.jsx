@@ -132,15 +132,31 @@ function IndexRoute({ speakers, schedule }) {
   );
 }
 
-IndexRoute.getInitialProps = async () => {
+IndexRoute.getInitialProps = async ({ res }) => {
   const [speakers, schedule] = await Promise.all([
     airtable.getSpeakers(),
     airtable.getSchedule()
   ]);
 
+  const etag = require("crypto")
+    .createHash("md5")
+    .update(
+      JSON.stringify({
+        speakers: speakers.data.records,
+        schedule: schedule.data.records
+      })
+    )
+    .digest("hex");
+
+  if (res) {
+    res.setHeader("Cache-Control", "s-maxage=60, stale-while-revalidate");
+    res.setHeader("X-version", etag);
+  }
+
   return {
     speakers: speakers.data.records,
-    schedule: schedule.data.records.reduce(groupByStartDate, {})
+    schedule: schedule.data.records.reduce(groupByStartDate, {}),
+    etag
   };
 };
 
