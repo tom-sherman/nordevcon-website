@@ -21,6 +21,11 @@ function Layout({ children, title }) {
           httpEquiv="content-type"
           content="text/html; charset=UTF-8"
         />
+        <meta
+          name="description"
+          content="The eastern region's biggest tech conference returns in February with a fantastic line-up of speakers and workshops."
+        />
+        <meta name="theme-color" content="#44337a" />
         <link rel="manifest" href="/manifest.json" />
       </Head>
 
