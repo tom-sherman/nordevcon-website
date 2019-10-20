@@ -1,0 +1,9 @@
+{
+  "name": "NorDevCon 2020",
+  "short_name": "NorDevCon 2020",
+  "background_color": "#FFFFFF",
+  "description": "The eastern region's biggest tech conference returns in February with a fantastic line-up of speakers and workshops.",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#000"
+}
