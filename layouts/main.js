@@ -21,6 +21,7 @@ function Layout({ children, title }) {
           httpEquiv="content-type"
           content="text/html; charset=UTF-8"
         />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
 
       <main>{children}</main>
