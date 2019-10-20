@@ -1,5 +1,12 @@
 const withCSS = require("@zeit/next-css");
 const withOffline = require("next-offline");
+const withPurgeCSS = require("next-purgecss");
+
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[\w-/:]+(?<!:)/g) || [];
+  }
+}
 
 const nextConfig = {
   target: "serverless",
@@ -46,7 +53,19 @@ const nextConfig = {
         }
       }
     ]
+  },
+  purgeCss: {
+    extractors: [
+      {
+        extractor: TailwindExtractor,
+        extensions: ["html", "js", "jsx", "css"]
+      }
+    ]
+  },
+  cssLoaderOptions: {
+    importLoaders: 1,
+    localIdentName: "[local]_[hash:base64:5]"
   }
 };
 
-module.exports = withOffline(withCSS(nextConfig));
+module.exports = withOffline(withCSS(withPurgeCSS(nextConfig)));

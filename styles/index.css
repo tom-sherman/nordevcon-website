@@ -47,7 +47,7 @@ a {
 }
 
 #hero {
-  background-image: url("/static/images/hero-mobile.png");
+  background-image: url("/static/images/hero-mobile.jpg");
   background-size: cover;
   background-position: center;
   background-color: #422d54;
@@ -56,6 +56,6 @@ a {
 
 @media (min-width: 640px) {
   #hero {
-    background-image: url("/static/images/hero-full.png");
+    background-image: url("/static/images/hero-full.jpg");
   }
 }
