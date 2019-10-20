@@ -1,10 +1,17 @@
 const withCSS = require("@zeit/next-css");
+const withPurgeCss = require("next-purgecss");
+
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[\w-/:]+(?<!:)/g) || [];
+  }
+}
 
 const nextConfig = {
   target: "serverless",
   env: {
     AIRTABLE_API_KEY: process.env.AIRTABLE_API_KEY,
-    MAPBOX_API_KEY: process.env.MAPBOX_API_KEY,
+    MAPBOX_API_KEY: process.env.MAPBOX_API_KEY
   },
   pageExtensions: ["jsx", "js"],
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
@@ -24,7 +31,19 @@ const nextConfig = {
     }
 
     return config;
+  },
+  purgeCss: {
+    extractors: [
+      {
+        extractor: TailwindExtractor,
+        extensions: ["html", "js", "jsx", "css"]
+      }
+    ]
+  },
+  cssLoaderOptions: {
+    importLoaders: 1,
+    localIdentName: "[local]_[hash:base64:5]"
   }
 };
 
-module.exports = withCSS(nextConfig);
+module.exports = withCSS(withPurgeCss(nextConfig));
