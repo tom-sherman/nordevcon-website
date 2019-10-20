@@ -58,25 +58,25 @@ function IndexRoute({ speakers, schedule }) {
             <ul className="flex justify-between -mx-2">
               <li key="kings-centre-1" className="m-2">
                 <img
-                  src={`${s3}/conference/kings-centre-1.png`}
+                  src={`${s3}/conference/kings-centre-1.jpg`}
                   alt="The Kings Centre's Main Conference Auditorium"
                 />
               </li>
               <li key="kings-centre-2" className="m-2">
                 <img
-                  src={`${s3}/conference/kings-centre-2.png`}
+                  src={`${s3}/conference/kings-centre-2.jpg`}
                   alt="The Kings Centre's Training Room"
                 />
               </li>
               <li key="kings-centre-3" className="m-2">
                 <img
-                  src={`${s3}/conference/kings-centre-3.png`}
+                  src={`${s3}/conference/kings-centre-3.jpg`}
                   alt="The Kings Centre Conference Room 1"
                 />
               </li>
               <li key="kings-centre-4" className="m-2">
                 <img
-                  src={`${s3}/conference/kings-centre-4.png`}
+                  src={`${s3}/conference/kings-centre-4.jpg`}
                   alt="The Kings Centre Conference Room 2"
                 />
               </li>
