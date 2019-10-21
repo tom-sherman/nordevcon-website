@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="mt-2 md:mt-4 lg:mt-8 bg-purple-900 text-white">
-      <div className="section py-8 flex">
-        <div className="flex-grow">
+      <div className="section py-8 md:flex">
+        <div className="mb-4 md:mb-0 flex-grow">
           <p>
             Norfolk Developers Ltd is a&nbsp;
             <a className="underline" href="https://beta.companieshouse.gov.uk/company/09500154">
