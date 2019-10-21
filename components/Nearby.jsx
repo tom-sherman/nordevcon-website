@@ -1,6 +1,4 @@
-import {
-  EntypoDirection
-} from 'react-entypo-icons';
+import EntypoDirection from "react-entypo-icons/lib/entypo/Direction";
 
 const s3 =
   "https://norfolkdevelopers.s3.eu-west-2.amazonaws.com/nordevcon-website/images";
@@ -22,7 +20,8 @@ const Locations = [
       "Located on Duke Street, close to the river. The Premier Inn offers an affordable stay.",
     distance: 0.5,
     directions: "https://goo.gl/maps/eVUoi1wYFkMoxPbd7",
-    website: "https://www.premierinn.com/gb/en/hotels/england/norfolk/norwich/norwich-city-centre-duke-street.html"
+    website:
+      "https://www.premierinn.com/gb/en/hotels/england/norfolk/norwich/norwich-city-centre-duke-street.html"
   },
   {
     title: "Maids Head",
@@ -57,7 +56,11 @@ export default function Nearby() {
             </header>
             <div className="sm:flex lg:flex-col lg:flex-grow">
               <div className="sm:w-1/3 lg:w-auto">
-                <img className="mx-auto" src={location.image} alt={ "An image of " + location.title } />
+                <img
+                  className="mx-auto"
+                  src={location.image}
+                  alt={"An image of " + location.title}
+                />
               </div>
 
               <div class="p-2 sm:px-4 lg:p-4 sm:w-2/3 lg:w-auto lg:flex-grow lg:flex lg:flex-col">
@@ -65,7 +68,9 @@ export default function Nearby() {
                   <p className="mb-2 lg:mb-4">{location.description}</p>
                   <p className="mb-2 lg:mb-4 font-semibold">
                     <EntypoDirection valign="middle" />
-                    <span className="ml-2">{location.distance}miles from the venue</span>
+                    <span className="ml-2">
+                      {location.distance}miles from the venue
+                    </span>
                   </p>
                 </div>
 
@@ -79,7 +84,12 @@ export default function Nearby() {
                     Directions
                   </a>
 
-                  <a className="btn" href={location.website} target="_blank" rel="noopener noreferrer">
+                  <a
+                    className="btn"
+                    href={location.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Website
                   </a>
                 </div>
