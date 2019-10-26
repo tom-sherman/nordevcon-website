@@ -22,3 +22,7 @@ export async function getSpeakers() {
 export async function getSchedule() {
   return callAPI("/Schedule");
 }
+
+export async function getSponsors() {
+  return callAPI("/Sponsors");
+}

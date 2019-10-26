@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import * as airtable from "../api/airtable";
 import Layout from "../layouts/main";
 import Navigation from "../components/Navigation";
@@ -8,6 +6,7 @@ import Speakers from "../components/Speakers";
 import Schedule from "../components/Schedule";
 import StaticMap from "../components/MapboxStaticMap";
 import Nearby from "../components/Nearby";
+import Sponsors from "../components/Sponsors";
 
 const groupByStartDate = (groups, event) => {
   let { Start } = event.fields;
@@ -29,7 +28,7 @@ const Location = {
   width: "768"
 };
 
-function IndexRoute({ speakers, schedule }) {
+function IndexRoute({ speakers, schedule, sponsors }) {
   return (
     <Layout>
       <Hero speakers={speakers} />
@@ -120,22 +119,19 @@ function IndexRoute({ speakers, schedule }) {
       </section>
 
       <section className="section" id="sponsors">
-        <h1>Sponsors</h1>
-        <p>Our wonderful sponsors</p>
-        <Link href="/sponsorship">
-          <a className="inline-block bg-white hover:bg-purple-600 p-4 text-purple-500 border-2 border-purple-500 hover:text-white font-bold rounded text-center mt-4 self-bottom mt-auto">
-            Become a sponsor
-          </a>
-        </Link>
+        <h1 className="text-6xl font-bold">Sponsors</h1>
+
+        <Sponsors sponsors={sponsors} />
       </section>
     </Layout>
   );
 }
 
 IndexRoute.getInitialProps = async ({ res }) => {
-  const [speakers, schedule] = await Promise.all([
+  const [speakers, schedule, sponsors] = await Promise.all([
     airtable.getSpeakers(),
-    airtable.getSchedule()
+    airtable.getSchedule(),
+    airtable.getSponsors()
   ]);
 
   const etag = require("crypto")
@@ -143,7 +139,8 @@ IndexRoute.getInitialProps = async ({ res }) => {
     .update(
       JSON.stringify({
         speakers: speakers.data.records,
-        schedule: schedule.data.records
+        schedule: schedule.data.records,
+        sponsors: sponsors.data.records
       })
     )
     .digest("hex");
@@ -156,6 +153,7 @@ IndexRoute.getInitialProps = async ({ res }) => {
   return {
     speakers: speakers.data.records,
     schedule: schedule.data.records.reduce(groupByStartDate, {}),
+    sponsors: sponsors.data.records,
     etag
   };
 };

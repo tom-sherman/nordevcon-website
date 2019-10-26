@@ -25,6 +25,16 @@ TODO: Fix Tailwind not working in @import:
   @apply bg-blue-600;
 }
 
+.btn-orange {
+  @apply bg-orange-500;
+}
+.btn-orange:hover {
+    @apply bg-orange-600;
+}
+.btn-orange:focus {
+    @apply bg-orange-600;
+}
+
 input + .btn {
   @apply rounded-tl-none rounded-bl-none;
 }
