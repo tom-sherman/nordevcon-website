@@ -59,3 +59,10 @@ a {
     background-image: url("/static/images/hero-full.jpg");
   }
 }
+
+.main {
+  background-image: url("/static/images/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
