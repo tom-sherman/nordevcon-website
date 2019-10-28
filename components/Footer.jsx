@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="mt-2 md:mt-4 lg:mt-8 bg-purple-900 text-white">
+    <footer className="bg-purple-900 text-white">
       <div className="section py-8 md:flex">
         <div className="mb-4 md:mb-0 flex-grow">
           <p>

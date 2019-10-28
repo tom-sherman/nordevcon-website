@@ -33,7 +33,14 @@ function IndexRoute({ speakers, schedule, sponsors }) {
     <Layout>
       <Hero speakers={speakers} />
       <Navigation />
-      <Speakers speakers={speakers} />
+
+      <section className="section" id="speakers">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          Speakers
+        </h1>
+
+        <Speakers speakers={speakers} />
+      </section>
 
       <section className="section bg-white" id="schedule">
         <h1 className="text-6xl font-bold">Schedule</h1>

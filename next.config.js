@@ -62,6 +62,11 @@ const nextConfig = {
       }
     ]
   },
+  purgeCssPaths: [
+    'pages/**/*',
+    'components/**/*',
+    'layouts/**/*' // also scan layouts folder
+  ],
   cssLoaderOptions: {
     importLoaders: 1,
     localIdentName: "[local]_[hash:base64:5]"
