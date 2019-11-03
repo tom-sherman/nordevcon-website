@@ -35,20 +35,25 @@ function IndexRoute({ speakers, schedule, sponsors }) {
       <Navigation />
 
       <section className="section" id="speakers">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
           Speakers
-        </h1>
+        </h2>
 
         <Speakers speakers={speakers} />
       </section>
 
       <section className="section bg-white" id="schedule">
-        <h1 className="text-6xl font-bold">Schedule</h1>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          Schedule
+        </h2>
+
         <Schedule schedule={schedule} speakers={speakers} />
       </section>
 
       <section className="section" id="location">
-        <h1 className="text-6xl font-bold">Location</h1>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          Location
+        </h2>
 
         <div className="md:flex">
           <div className="md:w-1/2 md:mr-2">
@@ -120,13 +125,17 @@ function IndexRoute({ speakers, schedule, sponsors }) {
       </section>
 
       <section className="section" id="nearby">
-        <h1 className="text-6xl font-bold">Nearby</h1>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          Nearby
+        </h2>
 
         <Nearby />
       </section>
 
       <section className="section" id="sponsors">
-        <h1 className="text-6xl font-bold">Sponsors</h1>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          Sponsors
+        </h2>
 
         <Sponsors sponsors={sponsors} />
       </section>
