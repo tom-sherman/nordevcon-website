@@ -27,7 +27,7 @@ function IndexRoute({ speakers, schedule, sponsors }) {
       <Navigation />
 
       <section className="section" id="speakers">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        <h2 className="headline">
           Speakers
         </h2>
 
@@ -35,7 +35,7 @@ function IndexRoute({ speakers, schedule, sponsors }) {
       </section>
 
       <section className="section bg-white" id="schedule">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        <h2 className="headline">
           Schedule
         </h2>
 
@@ -43,7 +43,7 @@ function IndexRoute({ speakers, schedule, sponsors }) {
       </section>
 
       <section className="section" id="location">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        <h2 className="headline">
           Location
         </h2>
 
@@ -51,7 +51,7 @@ function IndexRoute({ speakers, schedule, sponsors }) {
       </section>
 
       <section className="section" id="nearby">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        <h2 className="headline">
           Nearby
         </h2>
 
@@ -59,7 +59,7 @@ function IndexRoute({ speakers, schedule, sponsors }) {
       </section>
 
       <section className="section" id="sponsors">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        <h2 className="headline">
           Sponsors
         </h2>
 

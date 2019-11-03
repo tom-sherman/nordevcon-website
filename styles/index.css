@@ -46,6 +46,22 @@ end @import "./button.css";
   @apply max-w-7xl mx-auto px-3 py-6;
 }
 
+.headline {
+  @apply text-3xl font-bold mb-4;
+}
+
+@screen md {
+  .headline {
+    @apply text-4xl;
+  }
+}
+
+@screen lg {
+  .headline {
+    @apply text-5xl;
+  }
+}
+
 @tailwind utilities;
 
 html {
