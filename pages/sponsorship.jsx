@@ -103,7 +103,7 @@ function Sponsorship() {
     <Layout>
       <Navigation />
       <section className="section pt-12" id="intro">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+        <h1 className="headline">
           Sponsorship
         </h1>
         <p className="pb-4">
