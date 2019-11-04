@@ -181,11 +181,13 @@ function SponsorshipBox({ sponsorship }) {
             ))}
           </ul>
           {sponsorship.available && (
-            <Link href="/contact">
-              <a className="bg-white p-4 text-purple-500 border-2 border-purple-500 hover:bg-purple-600 hover:text-white font-bold rounded text-center mt-4">
-                Become a sponsor
-              </a>
-            </Link>
+            <a
+              href="https://forms.gle/HY3t7kTxqUEaPMEVA"
+              rel="nofollow"
+              className="bg-white p-4 text-purple-500 border-2 border-purple-500 hover:bg-purple-600 hover:text-white font-bold rounded text-center mt-4"
+            >
+              Become a sponsor
+            </a>
           )}
           {!sponsorship.available && (
             <span className="bg-grey-300 p-4 text-gray-700 border-2 border-gray-300 font-bold rounded text-center mt-4">
