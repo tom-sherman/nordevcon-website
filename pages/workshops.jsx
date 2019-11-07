@@ -1,6 +1,5 @@
 import Layout from "../layouts/main";
 import Navigation from "../components/Navigation";
-import WorkshopHero from "../assets/svg/workshop.svg";
 
 const s3 =
   "https://norfolkdevelopers.s3.eu-west-2.amazonaws.com/nordevcon-website/images";
