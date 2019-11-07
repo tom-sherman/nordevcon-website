@@ -19,7 +19,9 @@ const WORKSHOPS = [
         "In addition to this he also mentors a number of start-up businesses and consults on business growth ad development for a range of companies."
         ],
       avatar: `${s3}/speakers/matthew-draycott.jpg`
-    }
+    },
+    price: "TBC",
+    url: null
   },
   {
     title: "ITIL Problem Management Methodology",
@@ -35,7 +37,9 @@ const WORKSHOPS = [
         "He holds a BEng(Hons) from Brunel University.",
       ],
       avatar: `${s3}/speakers/michael-davey.jpg`
-    }
+    },
+    price: "TBC",
+    url: null
   }
 ];
 
@@ -67,17 +71,26 @@ export default function Workshops({ speakers }) {
       <section className="section" id="workshops">
         <ul>
           {WORKSHOPS.map(workshop => (
-            <li className="mb-4">
+            <li className="py-4 lg:py-8 border-t-2 border-gray-400">
               <h2 className="headline leading-none mb-0">{workshop.title}</h2>
-              <h3 className="mb-2 text-xl text-gray-600 leading-none">{workshop.tutor.name}</h3>
+              <h3 className="mb-4 text-xl text-gray-600 leading-none">{workshop.tutor.name}</h3>
 
               {workshop.description.map(line => <p className="mb-2 text-sm">{line}</p>)}
 
+              <div className="py-2 flex items-center">
+                {workshop.url && (
+                  <a href={workshop.url} className="mr-4 btn btn-lg">
+                    Get Tickets
+                  </a>
+                )}
+                <p className="text-purple-700 font-bold text-xl">£{workshop.price}</p>
+              </div>
+
               <div className="mt-2 flex">
-                <div className="w-1/3 p-2 pl-0">
+                <div className="w-1/4 pr-4">
                   <img src={workshop.tutor.avatar} />
                 </div>
-                <div className="w-2/3 p-2 pr-0">
+                <div className="w-3/4">
                   <h4 className="mb-2 font-bold leading-none">{workshop.tutor.name}</h4>
                   {workshop.tutor.description.map(line => <p className="mb-2 text-sm">{line}</p>)}
                 </div>

@@ -15,6 +15,10 @@ TODO: Fix Tailwind not working in @import:
   @apply outline-none bg-purple-600;
 }
 
+.btn-lg {
+  @apply py-4 px-8 text-lg;
+}
+
 .btn-blue {
   @apply bg-blue-500;
 }
