@@ -1,3 +1,4 @@
+import Link from "next/link";
 import * as airtable from "../api/airtable";
 import Layout from "../layouts/main";
 import Navigation from "../components/Navigation";
@@ -40,6 +41,22 @@ function IndexRoute({ speakers, schedule, sponsors }) {
         </h2>
 
         <Schedule schedule={schedule} speakers={speakers} />
+      </section>
+
+      <section className="section" id="workshops">
+        <h2 className="headline">
+          Workshops
+        </h2>
+
+        <p className="mb-4">
+          We're running a range of Workshops before and during the event. If you'd like a more hands-on experience, give that button a click!
+        </p>
+
+        <Link href="/workshops">
+          <a className="btn">
+            View our Workshops
+          </a>
+        </Link>
       </section>
 
       <section className="section" id="location">
