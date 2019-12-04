@@ -20,8 +20,8 @@ const WORKSHOPS = [
         ],
       avatar: `${s3}/speakers/matthew-draycott.jpg`
     },
-    price: "TBC",
-    url: null
+    price: "£20.00",
+    url: "https://www.eventbrite.co.uk/e/nordevcon-2020-tickets-65832042411"
   },
   {
     title: "ITIL Problem Management Methodology",
@@ -38,8 +38,26 @@ const WORKSHOPS = [
       ],
       avatar: `${s3}/speakers/michael-davey.jpg`
     },
-    price: "TBC",
-    url: null
+    price: "£20.00",
+    url: "https://www.eventbrite.co.uk/e/nordevcon-2020-tickets-65832042411"
+  },
+  {
+    title: "Certified ScrumMaster",
+    description: [
+      "This innovative Scrum class won’t be like any other you’ve heard of, with an unconventional focus on the deeply human foundations at work in teams building stuff together.",
+      "Sponsored together with nor(DEV):con 2020. Those who successfully complete the course and pass the exam will receive Scrum Alliance ScrumMaster certification.",
+    ],
+    tutor: {
+      name: "James Coplien",
+      description: [
+        "James O. Coplien, also known as Cope, is a writer, lecturer, and researcher in the field of computer science.",
+        "In a former life Cope is best known for his design and programming books such as Advanced C++, Multi-Paradigm Design, and the pioneering two books of the PLoPD series of edited works. He is also one of the founders of the pattern discipline, and he is the Product Owner for the Scrum patterns effort at ScrumPLoP.",
+        "He works with Jeff and Ken to keep the Scrum Guide up to snuff. He is a partner with Gertrud & Cope in Denmark, with Scruminc, and also with The Scrum Foundation.",
+      ],
+      avatar: `${s3}/speakers/james-coplien.jpeg`
+    },
+    price: "€912 (+VAT)",
+    url: "https://www.eventbrite.com/e/certified-scrummaster-tickets-72361869299"
   }
 ];
 
@@ -83,7 +101,7 @@ export default function Workshops({ speakers }) {
                     Get Tickets
                   </a>
                 )}
-                <p className="text-purple-700 font-bold text-xl">£{workshop.price}</p>
+                <p className="text-purple-700 font-bold text-xl">{workshop.price}</p>
               </div>
 
               <div className="mt-2 flex">
