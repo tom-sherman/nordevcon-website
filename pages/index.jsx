@@ -1,3 +1,4 @@
+import Link from "next/link";
 import * as airtable from "../api/airtable";
 import Layout from "../layouts/main";
 import Navigation from "../components/Navigation";
@@ -27,41 +28,48 @@ function IndexRoute({ speakers, schedule, sponsors }) {
       <Navigation />
 
       <section className="section" id="speakers">
-        <h2 className="headline">
-          Speakers
-        </h2>
+        <h2 className="headline">Speakers</h2>
 
         <Speakers speakers={speakers} />
       </section>
 
       <section className="section bg-white" id="schedule">
-        <h2 className="headline">
-          Schedule
-        </h2>
+        <h2 className="headline">Schedule</h2>
 
         <Schedule schedule={schedule} speakers={speakers} />
       </section>
 
+      <section className="section" id="workshops">
+        <h2 className="headline">Workshops</h2>
+
+        <p className="mb-4">
+          Take full advantage of your visit by attending one of our workshops
+          run by a group of experienced speakers and trainers.
+        </p>
+        <p className="mb-4">
+          We'll be exploring topics like shaping business ideas, problem
+          management methodologies and accounting for contractors.
+        </p>
+
+        <Link href="/workshops">
+          <a className="btn">View workshops</a>
+        </Link>
+      </section>
+
       <section className="section" id="location">
-        <h2 className="headline">
-          Location
-        </h2>
+        <h2 className="headline">Location</h2>
 
         <Location />
       </section>
 
       <section className="section" id="nearby">
-        <h2 className="headline">
-          Nearby
-        </h2>
+        <h2 className="headline">Nearby</h2>
 
         <Nearby />
       </section>
 
       <section className="section" id="sponsors">
-        <h2 className="headline">
-          Sponsors
-        </h2>
+        <h2 className="headline">Sponsors</h2>
 
         <Sponsors sponsors={sponsors} />
       </section>
