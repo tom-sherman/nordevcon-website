@@ -74,7 +74,7 @@ const PACKAGES = {
   dinner: {
     title: "Conference Dinner",
     price: "£2,800",
-    available: true,
+    available: false,
     features: [
       "Five minute introduction before dinner",
       "Logo on placecards/card in lanyard",
