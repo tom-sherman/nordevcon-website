@@ -27,7 +27,7 @@ function IndexRoute({ speakers, schedule, sponsors }) {
       <Hero speakers={speakers} />
       <Navigation />
 
-      <section className="section" id="speakers">
+      <section className="section overflow-hidden" id="speakers">
         <h2 className="headline">Speakers</h2>
 
         <Speakers speakers={speakers} />
