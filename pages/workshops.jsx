@@ -10,14 +10,14 @@ const WORKSHOPS = [
     description: [
       "This workshop is aimed at people who want to shape a business idea or project but aren't sure where to start. It will also be of value to anyone who wants to understand, in detail, a process of ideation and, learn deliberate techniques to develop and test ideas outside of a technical context.",
       "During the workshop Matt will explore business tools and techniques which he uses in his own practice to help people shape their ideas into impactful and feasible ventures or projects. The workshop will cover a broad range of topics and include a lot of practical activities, some of which will necessitate working in small groups with other participants.",
-      "All of the tools Matt will use are freely available and, there will be copies to take away with you.",
+      "All of the tools Matt will use are freely available and, there will be copies to take away with you."
     ],
     tutor: {
       name: "Matthew Draycott",
       description: [
         "Matt is a lecturer and a recovering entrepreneur, he's been teaching enterprise and entrepreneurial skills for over a decade and currently lectures at a number of institutions around the UK, delivering a range of course focused on mindset development, ideation, business modelling and business strategy.",
         "In addition to this he also mentors a number of start-up businesses and consults on business growth ad development for a range of companies."
-        ],
+      ],
       avatar: `${s3}/speakers/matthew-draycott.jpg`
     },
     price: "£20.00",
@@ -27,37 +27,19 @@ const WORKSHOPS = [
     title: "ITIL Problem Management Methodology",
     description: [
       "Troubleshooters are special people. They are able to walk into a mess and make sense out of it. They have a knack for recognising problems earlier than most and before the customer notices.  They find the root cause and fix it in a way that means the problem stays fixed. Really good troubleshooters think ahead and avoid problems before they happen. Learn how they do it and how to acquire the same skills.",
-      "This workshop is ideal for employees and students at all levels who are required to troubleshoot, root cause, make decisions or implement plans.  It is particularly suitable for managers who are just about to create a new customer service department, for students just about to enter the marketplace and for senior executives who want to improve the performance and efficiency of existing engineering, customer service, manufacturing or operations teams.",
-      ],
+      "This workshop is ideal for employees and students at all levels who are required to troubleshoot, root cause, make decisions or implement plans.  It is particularly suitable for managers who are just about to create a new customer service department, for students just about to enter the marketplace and for senior executives who want to improve the performance and efficiency of existing engineering, customer service, manufacturing or operations teams."
+    ],
     tutor: {
       name: "Michael Davey",
       description: [
         "His 22-year career has included the design and maintenance of IPTV networks (predominantly Fibre-to-the-Home) and IPTV set-top-boxes. He has experience in multi-million dollar consumer electronics and networking projects, including the design, procurement, project management, installation and commissioning of broadcast, broadband and Internet-of-things solutions.",
         "Michael is a Software Architect and member of the BCS.",
-        "He holds a BEng(Hons) from Brunel University.",
+        "He holds a BEng(Hons) from Brunel University."
       ],
       avatar: `${s3}/speakers/michael-davey.jpg`
     },
     price: "£20.00",
     url: "https://www.eventbrite.co.uk/e/nordevcon-2020-tickets-65832042411"
-  },
-  {
-    title: "Certified ScrumMaster",
-    description: [
-      "This innovative Scrum class won’t be like any other you’ve heard of, with an unconventional focus on the deeply human foundations at work in teams building stuff together.",
-      "Sponsored together with nor(DEV):con 2020. Those who successfully complete the course and pass the exam will receive Scrum Alliance ScrumMaster certification.",
-    ],
-    tutor: {
-      name: "James Coplien",
-      description: [
-        "James O. Coplien, also known as Cope, is a writer, lecturer, and researcher in the field of computer science.",
-        "In a former life Cope is best known for his design and programming books such as Advanced C++, Multi-Paradigm Design, and the pioneering two books of the PLoPD series of edited works. He is also one of the founders of the pattern discipline, and he is the Product Owner for the Scrum patterns effort at ScrumPLoP.",
-        "He works with Jeff and Ken to keep the Scrum Guide up to snuff. He is a partner with Gertrud & Cope in Denmark, with Scruminc, and also with The Scrum Foundation.",
-      ],
-      avatar: `${s3}/speakers/james-coplien.jpeg`
-    },
-    price: "€912 (+VAT)",
-    url: "https://www.eventbrite.com/e/certified-scrummaster-tickets-72361869299"
   }
 ];
 
@@ -91,9 +73,13 @@ export default function Workshops({ speakers }) {
           {WORKSHOPS.map(workshop => (
             <li className="py-4 lg:py-8 border-t-2 border-gray-400">
               <h2 className="headline leading-none mb-0">{workshop.title}</h2>
-              <h3 className="mb-4 text-xl text-gray-600 leading-none">{workshop.tutor.name}</h3>
+              <h3 className="mb-4 text-xl text-gray-600 leading-none">
+                {workshop.tutor.name}
+              </h3>
 
-              {workshop.description.map(line => <p className="mb-2 text-sm">{line}</p>)}
+              {workshop.description.map(line => (
+                <p className="mb-2 text-sm">{line}</p>
+              ))}
 
               <div className="py-2 flex items-center">
                 {workshop.url && (
@@ -101,7 +87,9 @@ export default function Workshops({ speakers }) {
                     Get Tickets
                   </a>
                 )}
-                <p className="text-purple-700 font-bold text-xl">{workshop.price}</p>
+                <p className="text-purple-700 font-bold text-xl">
+                  {workshop.price}
+                </p>
               </div>
 
               <div className="mt-2 flex">
@@ -109,8 +97,12 @@ export default function Workshops({ speakers }) {
                   <img src={workshop.tutor.avatar} />
                 </div>
                 <div className="w-3/4">
-                  <h4 className="mb-2 font-bold leading-none">{workshop.tutor.name}</h4>
-                  {workshop.tutor.description.map(line => <p className="mb-2 text-sm">{line}</p>)}
+                  <h4 className="mb-2 font-bold leading-none">
+                    {workshop.tutor.name}
+                  </h4>
+                  {workshop.tutor.description.map(line => (
+                    <p className="mb-2 text-sm">{line}</p>
+                  ))}
                 </div>
               </div>
             </li>
