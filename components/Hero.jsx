@@ -24,7 +24,9 @@ export default function Hero({ speakers }) {
         </a>
         <div className="flex flex-row content-between text-center w-full mt-12">
           <div className="flex flex-col w-1/3">
-            <span className="text-xl font-bold lg:text-4xl">{speakers.length}+</span>
+            <span className="text-xl font-bold lg:text-4xl">
+              {speakers.length}+
+            </span>
             <span className="text-sm text-gray-500 lg:text-xl">speakers</span>
           </div>
           <div className="flex flex-col w-1/3">
@@ -32,7 +34,9 @@ export default function Hero({ speakers }) {
             <span className="text-sm text-gray-500 lg:text-xl">tracks</span>
           </div>
           <div className="flex flex-col w-1/3">
-            <span className="text-xl font-bold text-center lg:text-4xl">X</span>
+            <span className="text-xl font-bold text-center lg:text-4xl">
+              40+
+            </span>
             <span className="text-sm text-gray-500 lg:text-xl">sessions</span>
           </div>
         </div>
