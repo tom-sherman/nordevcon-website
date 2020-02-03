@@ -9,10 +9,14 @@ const links = [
 
 export default function Navgation() {
   return (
-    <nav className="bg-white opacity-75 md:sticky md:top-0 overflow-x-auto">
+    <nav className="bg-white md:sticky md:top-0 overflow-x-auto">
       <div className="section">
         {links.map((link, index) => (
-          <a key={index} className="py-6 mr-6 font-bold hover:underline" href={link.href}>
+          <a
+            key={index}
+            className="py-6 mr-6 font-bold hover:underline"
+            href={link.href}
+          >
             {link.label}
           </a>
         ))}

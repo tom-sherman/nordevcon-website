@@ -1,3 +1,4 @@
+import React from "react";
 import Talks from "./Talks";
 import format from "date-fns/format";
 
@@ -21,7 +22,7 @@ export default ({ schedule, speakers }) => (
   <section className="relative">
     <ol className="lg:absolute top-0 right-0">
       {Object.keys(Theme).map(track => (
-        <li className="align-middle">
+        <li className="align-middle" key={track}>
           <span
             className="mr-2 inline-block w-4 h-4 align-middle"
             style={{ backgroundColor: Theme[track] }}
@@ -34,7 +35,7 @@ export default ({ schedule, speakers }) => (
       {Object.keys(schedule)
         .sort()
         .map((start, index, dates) => (
-          <>
+          <React.Fragment key={start}>
             {index === 0 ||
             new Date(start).getDate() !==
               new Date(dates[index - 1]).getDate() ? (
@@ -60,7 +61,7 @@ export default ({ schedule, speakers }) => (
                 />
               </div>
             </li>
-          </>
+          </React.Fragment>
         ))}
     </ol>
   </section>

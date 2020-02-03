@@ -29,7 +29,7 @@ function Layout({ children, title }) {
         <link rel="manifest" href="/manifest.json" />
       </Head>
 
-      <main className="main pb-2 md:pb-4 lg:pb-8">{children}</main>
+      <main className="pb-2 md:pb-4 lg:pb-8">{children}</main>
       <Footer />
     </>
   );

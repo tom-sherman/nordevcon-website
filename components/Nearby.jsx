@@ -63,7 +63,7 @@ export default function Nearby() {
                 />
               </div>
 
-              <div class="p-2 sm:px-4 lg:p-4 sm:w-2/3 lg:w-auto lg:flex-grow lg:flex lg:flex-col">
+              <div className="p-2 sm:px-4 lg:p-4 sm:w-2/3 lg:w-auto lg:flex-grow lg:flex lg:flex-col">
                 <div className="lg:flex-grow">
                   <p className="mb-2 lg:mb-4">{location.description}</p>
                   <p className="mb-2 lg:mb-4 font-semibold">
