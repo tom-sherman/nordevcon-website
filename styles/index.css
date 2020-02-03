@@ -33,10 +33,10 @@ TODO: Fix Tailwind not working in @import:
   @apply bg-orange-500;
 }
 .btn-orange:hover {
-    @apply bg-orange-600;
+  @apply bg-orange-600;
 }
 .btn-orange:focus {
-    @apply bg-orange-600;
+  @apply bg-orange-600;
 }
 
 input + .btn {
@@ -95,4 +95,8 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.monospace {
+  font-family: monospace;
 }
