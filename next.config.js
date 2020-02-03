@@ -1,6 +1,6 @@
 const withCSS = require("@zeit/next-css");
-const withOffline = require("next-offline");
 const withPurgeCSS = require("next-purgecss");
+// const withOffline = require("next-offline");
 
 class TailwindExtractor {
   static extract(content) {
@@ -63,9 +63,9 @@ const nextConfig = {
     ]
   },
   purgeCssPaths: [
-    'pages/**/*',
-    'components/**/*',
-    'layouts/**/*' // also scan layouts folder
+    "pages/**/*",
+    "components/**/*",
+    "layouts/**/*" // also scan layouts folder
   ],
   cssLoaderOptions: {
     importLoaders: 1,
@@ -73,4 +73,4 @@ const nextConfig = {
   }
 };
 
-module.exports = withOffline(withCSS(withPurgeCSS(nextConfig)));
+module.exports = withCSS(withPurgeCSS(nextConfig));
