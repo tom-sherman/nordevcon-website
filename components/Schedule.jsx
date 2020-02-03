@@ -11,11 +11,26 @@ const Tracks = [
 ];
 
 const Theme = {
-  "Main Auditorium (Track 1)": "#CFDFFF",
-  "Conference Room 1 (Track 2)": "#D0F0FD",
-  "Conference Room 2 (Track 3)": "#C2F5E9",
-  "Board Room (Track 4)": "#D1F7C4",
-  "Training Room 1": "#FFEAB6"
+  "Main Auditorium (Track 1)": {
+    background: "bg-red-700",
+    border: "border-red-700"
+  },
+  "Conference Room 1 (Track 2)": {
+    background: "bg-blue-400",
+    border: "border-blue-500"
+  },
+  "Conference Room 2 (Track 3)": {
+    background: "bg-green-400",
+    border: "border-green-400"
+  },
+  "Board Room (Track 4)": {
+    background: "bg-pink-400",
+    border: "border-pink-400"
+  },
+  "Training Room 1": {
+    background: "bg-purple-600",
+    border: "border-purple-600"
+  }
 };
 
 export default ({ schedule, speakers }) => (
@@ -24,8 +39,7 @@ export default ({ schedule, speakers }) => (
       {Object.keys(Theme).map(track => (
         <li className="align-middle" key={track}>
           <span
-            className="mr-2 inline-block w-4 h-4 align-middle"
-            style={{ backgroundColor: Theme[track] }}
+            className={`mr-2 inline-block w-4 h-4 align-middle ${Theme[track].background}`}
           ></span>
           {track}
         </li>
