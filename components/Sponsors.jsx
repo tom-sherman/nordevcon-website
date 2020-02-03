@@ -41,7 +41,10 @@ export default function Sponsors({ sponsors }) {
 
       <ol className="mt-6 lg:-mx-2 lg:flex lg:flex-wrap">
         {sponsors.sort(SponsorSort).map(sponsor => (
-          <li className="lg:px-2 w-full lg:w-1/4 flex">
+          <li
+            className="lg:px-2 w-full lg:w-1/4 flex"
+            key={sponsor.fields.Name}
+          >
             <Sponsor sponsor={sponsor} />
           </li>
         ))}

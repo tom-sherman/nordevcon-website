@@ -9,7 +9,7 @@ const links = [
 
 export default function Navgation() {
   return (
-    <nav className="bg-white md:sticky md:top-0 overflow-x-auto">
+    <nav className="bg-white md:sticky md:top-0 overflow-x-auto z-40">
       <div className="section">
         {links.map((link, index) => (
           <a
