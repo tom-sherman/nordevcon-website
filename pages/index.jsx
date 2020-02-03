@@ -19,8 +19,8 @@ const groupByStartDate = (groups, event) => {
   return groups;
 };
 
-const s3 =
-  "https://norfolkdevelopers.s3.eu-west-2.amazonaws.com/nordevcon-website/images";
+// const s3 =
+//   "https://norfolkdevelopers.s3.eu-west-2.amazonaws.com/nordevcon-website/images";
 
 function IndexRoute({ speakers, schedule, sponsors }) {
   return (
