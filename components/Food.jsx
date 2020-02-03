@@ -32,7 +32,7 @@ const meals = {
 
 function renderMeal(meal) {
   return (
-    <div className="bg-white shadow-lg border rounded-lg w-full border m-2 flex flex-col overflow-hidden md:w-1/2">
+    <div className="bg-white shadow-lg border rounded-lg w-full border md:m-2 mb-4 flex flex-col overflow-hidden md:w-1/2">
       <header className="p-4 bg-purple-600 text-white">
         <h2 className="block text-2xl font-bold text-center">{meal.title}</h2>
       </header>
@@ -64,7 +64,7 @@ function renderMeal(meal) {
 
 export default function Food() {
   return (
-    <div className="sm:flex sm:flex-row -mx-2">
+    <div className="sm:flex sm:flex-row md:-mx-2">
       {renderMeal(meals.breakfast)}
       {renderMeal(meals.dinner)}
     </div>
