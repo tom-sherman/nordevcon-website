@@ -8,7 +8,7 @@ const meals = {
       "Breakfast at the Maids Head Hotel, supported by Birketts & hosted by James Russell (Brisk).",
     summary:
       "In this talk, James will talk about what Brisk is doing with the likes of Aviva, Hiscox and Covea Insurance to protect and reward businesses who are willing to be open with their data.",
-    when: "Fri, 28 February 2020 19:00 – 22:00",
+    when: "Fri, 28 February 2020, 07:30 – 08:30",
     link:
       "https://www.eventbrite.co.uk/e/nordevcon-2020-conference-breakfast-tickets-88674661299",
     price: "£15.15"
@@ -22,7 +22,8 @@ const meals = {
       "Enjoy an exceptional post-conference three course meal, prepared by Ginger Lily catering.",
     summary:
       "We're joined by Norfolk County Council and a representative from the Department for International Trade who will give us a brief update on their local initiatives and investments.",
-    when: "Fri, 28 February 2020, 07:30 – 08:30",
+
+    when: "Fri, 28 February 2020 19:00 – 22:00",
     link:
       "https://www.eventbrite.co.uk/e/nordevcon-2020-conference-dinner-tickets-91142229863",
     price: "£15.15"
