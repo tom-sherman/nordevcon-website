@@ -1,6 +1,6 @@
 const withCSS = require("@zeit/next-css");
 const withPurgeCSS = require("next-purgecss");
-// const withOffline = require("next-offline");
+const withOffline = require("next-offline");
 
 class TailwindExtractor {
   static extract(content) {
@@ -73,4 +73,4 @@ const nextConfig = {
   }
 };
 
-module.exports = withCSS(withPurgeCSS(nextConfig));
+module.exports = withOffline(withCSS(withPurgeCSS(nextConfig)));
