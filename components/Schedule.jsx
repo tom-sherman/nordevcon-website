@@ -62,7 +62,7 @@ export default ({ schedule, speakers }) => (
             )}
             <li key={start} className="flex py-2">
               <div className="mr-8">
-                <h3 className="monospace text-2xl text-gray-600 align-top leading-none">
+                <h3 className="monospace pt-2 text-2xl text-gray-600 align-top leading-none">
                   {format(new Date(start), "HH:mm")}
                 </h3>
               </div>
