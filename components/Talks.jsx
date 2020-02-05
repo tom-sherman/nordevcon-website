@@ -19,7 +19,8 @@ export default ({ talks, speakers, tracks, theme }) => (
         key={talk.id}
         className={`${
           talks.length > 1 ? "mb-2 border-l-8 pl-2 xl:m-0 xl:w-1/5" : "w-full"
-        } ${theme[talk.fields.Track]?.border}`}
+        }`}
+        style={{ borderColor: theme[talk.fields.Track]?.border }}
       >
         <h3 className="mr-4 font-bold align-top leading-none">
           {talk.fields.Title}
