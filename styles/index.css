@@ -100,3 +100,43 @@ a {
 .monospace {
   font-family: monospace;
 }
+
+.close-button {
+  /* margin-top: -10px; */
+  margin-right: -12px;
+  padding: 0;
+  line-height: 14px;
+}
+
+[data-reach-dialog-content] {
+  width: 90vw;
+  margin: 8vh auto;
+  background: white;
+  padding: 2rem;
+  outline: none;
+}
+
+@media (min-width: 800px) {
+  [data-reach-dialog-content] {
+    width: 50vw;
+    margin: 10vh auto;
+  }
+}
+
+[data-reach-dialog-overlay] {
+  background: hsla(0, 0%, 0%, 0.33);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+}
+
+.modal-content p {
+  margin-bottom: 18px;
+}
+
+.modal-content a {
+  color: purple;
+}

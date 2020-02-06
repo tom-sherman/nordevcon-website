@@ -35,7 +35,7 @@ const nextConfig = {
   },
   generateInDevMode: false,
   workboxOpts: {
-    swDest: "static/service-worker.js",
+    swDest: "public/static/service-worker.js",
     runtimeCaching: [
       {
         urlPattern: /^https?.*/,
