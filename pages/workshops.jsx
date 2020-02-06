@@ -12,6 +12,8 @@ const WORKSHOPS = [
       "During the workshop Matt will explore business tools and techniques which he uses in his own practice to help people shape their ideas into impactful and feasible ventures or projects. The workshop will cover a broad range of topics and include a lot of practical activities, some of which will necessitate working in small groups with other participants.",
       "All of the tools Matt will use are freely available and, there will be copies to take away with you."
     ],
+    dateTime: "Wednesday 26th February 2020, 9:00am - 5:00pm",
+    location: "The King's Center, Norwich",
     tutor: {
       name: "Matthew Draycott",
       description: [
@@ -29,6 +31,8 @@ const WORKSHOPS = [
       "Troubleshooters are special people. They are able to walk into a mess and make sense out of it. They have a knack for recognising problems earlier than most and before the customer notices.  They find the root cause and fix it in a way that means the problem stays fixed. Really good troubleshooters think ahead and avoid problems before they happen. Learn how they do it and how to acquire the same skills.",
       "This workshop is ideal for employees and students at all levels who are required to troubleshoot, root cause, make decisions or implement plans.  It is particularly suitable for managers who are just about to create a new customer service department, for students just about to enter the marketplace and for senior executives who want to improve the performance and efficiency of existing engineering, customer service, manufacturing or operations teams."
     ],
+    dateTime: "Wednesday 26th February 2020, 9:00am - 5:00pm",
+    location: "The King's Center, Norwich",
     tutor: {
       name: "Michael Davey",
       description: [
@@ -80,6 +84,9 @@ export default function Workshops({ speakers }) {
               {workshop.description.map(line => (
                 <p className="mb-2 text-sm">{line}</p>
               ))}
+
+              <p className="font-bold">{workshop.dateTime}</p>
+              <p>{workshop.location}</p>
 
               <div className="py-2 flex items-center">
                 {workshop.url && (
