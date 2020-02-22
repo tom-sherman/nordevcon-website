@@ -140,3 +140,14 @@ a {
 .modal-content a {
   color: purple;
 }
+
+.banner {
+  background: linear-gradient(
+    60deg,
+    rgb(90, 199, 181) 10%,
+    rgb(88, 161, 230) 50%,
+    rgb(185, 147, 243) 100%
+  );
+  width: 100%;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}

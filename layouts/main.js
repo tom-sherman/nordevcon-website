@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Footer from "../components/Footer";
+import SaleBanner from "../components/SaleBanner";
 
 const description =
   "The eastern region's biggest tech conference returns February 26-28th with a fantastic line-up of speakers and workshops.";
@@ -43,6 +44,7 @@ function Layout({ children, title }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
+      <SaleBanner />
       <main className="pb-2 md:pb-4 lg:pb-8">{children}</main>
       <Footer />
     </>
