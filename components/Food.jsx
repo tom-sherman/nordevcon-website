@@ -65,7 +65,6 @@ function renderMeal(meal) {
 export default function Food() {
   return (
     <div className="sm:flex sm:flex-row md:-mx-2">
-      {renderMeal(meals.breakfast)}
       {renderMeal(meals.dinner)}
     </div>
   );
