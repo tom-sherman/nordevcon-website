@@ -14,7 +14,7 @@ export default function Navgation() {
         {links.map((link, index) => (
           <a
             key={index}
-            className="py-6 mr-6 font-bold hover:underline"
+            className="mr-6 font-bold hover:underline"
             href={link.href}
           >
             {link.label}
