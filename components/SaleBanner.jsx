@@ -5,7 +5,6 @@ export default function SaleBanner() {
         <span role="img" aria-label="Lightning bolt">
           ⚡️
         </span>
-        TICKETS{" "}
         <span className="bg-teal-400 inline-block pl-2 pr-2">50% OFF</span> with
         code <span className="bg-purple-600 inline-block pl-2 pr-2">FLASH</span>
         <span role="img" aria-label="Lightning bolt">
@@ -14,9 +13,9 @@ export default function SaleBanner() {
       </p>
       <a
         href="https://www.eventbrite.co.uk/e/nordevcon-2020-tickets-65832042411?discount=FLASH"
-        className="ml-2 p-2 inline-block bg-red-400 font-bold"
+        className="ml-2 p-2 inline-block bg-red-400 font-bold gradient-red rounded"
       >
-        BUY TICKETS
+        Buy tickets
       </a>
     </div>
   );
