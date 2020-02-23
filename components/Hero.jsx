@@ -17,7 +17,7 @@ export default function Hero({ speakers }) {
           of speakers and workshops.
         </h1>
         <a
-          href="https://www.eventbrite.co.uk/e/nordevcon-2020-tickets-65832042411"
+          href="https://www.eventbrite.co.uk/e/nordevcon-2020-tickets-65832042411?discount=FLASH"
           className="bg-red-500 block text-center text-white p-3 font-bold mt-4 w-full max-w-sm rounded shadow-lg hover:bg-red-600"
         >
           Buy tickets
