@@ -48,6 +48,8 @@ end @import "./button.css";
 
 .section {
   @apply max-w-7xl mx-auto px-3 py-6;
+
+  scroll-margin-top: 76px;
 }
 
 .headline {
