@@ -42,20 +42,20 @@ function renderMeal(meal) {
           <p className="m-2 font-bold">{meal.description}</p>
           <p className="m-2">{meal.summary}</p>
           <p className="m-2 text-gray-600 font-bold">{meal.when}</p>
-          <a
+          {/* <a
             className="btn bg-red-500 m-2"
             href={meal.link}
             target="_blank"
             rel="noopener noreferrer"
           >
             Buy Tickets
-          </a>
+          </a> */}
           {/* <span className="text-gray-500">{meal.price}</span> */}
-          {meal.type === "dinner" ? (
+          {/* {meal.type === "dinner" ? (
             <a className="text-gray-500 ml-auto" href={meal.link}>
               View menu
             </a>
-          ) : null}
+          ) : null} */}
         </div>
       </div>
     </div>
