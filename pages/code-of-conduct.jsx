@@ -105,9 +105,10 @@ function CodeOfConductRoute() {
           <p className="mt-2">
             If someone makes you or anyone else feel unsafe or unwelcome, please
             report it as soon as possible. Conference staff can be identified by
-            their t-shirts. Harassment and other code of conduct violations
-            reduce the value of our event for everyone. We want you to be happy
-            at our event. People like you make our event a better place.
+            their t-shirts or lanyard badges. Harassment and other code of
+            conduct violations reduce the value of our event for everyone. We
+            want you to be happy at our event. People like you make our event a
+            better place.
           </p>
 
           <p className="mt-2">
@@ -262,14 +263,14 @@ function CodeOfConductRoute() {
           </p>
 
           <p>
-            The ACCU Code of Conduct's is licesnsed under the{" "}
+            The ACCU Code of Conduct's is licensed under the{" "}
             <a
               className="text-purple-700 underline"
               href="https://creativecommons.org/licenses/by/3.0/"
             >
               Creative Commons Attribution
             </a>{" "}
-            and the Geek Feminism Code of Conduct is itself licesnsed under the{" "}
+            and the Geek Feminism Code of Conduct is itself licensed under the{" "}
             <a
               className="text-purple-700 underline"
               href="http://creativecommons.org/publicdomain/zero/1.0/"
