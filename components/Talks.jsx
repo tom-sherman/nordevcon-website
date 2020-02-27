@@ -40,7 +40,7 @@ export default ({ talks, speakers, tracks, theme }) => {
             style={{ borderColor: theme[talk.fields.Track]?.border }}
             onClick={() => setSelectedSession(talk.fields.Title)}
           >
-            <h3 className="mr-4 font-bold align-top leading-none">
+            <h3 className={talk.fields.Cancelled ? "mr-4 font-bold align-top leading-none line-through" : "mr-4 font-bold align-top leading-none"}>
               {talk.fields.Title}
             </h3>
             <p className="text-gray-900">{getSpeakersNames(talk, speakers)}</p>
