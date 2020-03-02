@@ -21,8 +21,8 @@ export default function Location() {
         </h3>
         <p className="mb-4">
           The King's Centre is a quality conference venue in the centre of
-          Norwich, offering 14 different rooms available to hire to suit
-          your event; from 6 people to 650.
+          Norwich, offering 14 different rooms available to hire to suit your
+          event; from 6 people to 650.
         </p>
 
         <ul className="flex justify-between -mx-2">
@@ -60,7 +60,7 @@ export default function Location() {
 
         <form
           className="absolute right-0 bottom-0 left-0"
-          action="http://maps.google.com/maps"
+          action="https://maps.google.com/maps"
           method="get"
           target="_blank"
         >
