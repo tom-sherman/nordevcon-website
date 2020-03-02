@@ -1,11 +1,4 @@
-const links = [
-  { href: "/#hero", label: "Home" },
-  { href: "/#speakers", label: "Speakers" },
-  { href: "/#schedule", label: "Schedule" },
-  { href: "/#location", label: "Location" },
-  { href: "/#nearby", label: "Information" },
-  { href: "/#sponsors", label: "Sponsors" }
-];
+const links = [{ href: "/#hero", label: "Home" }];
 
 export default function Navgation() {
   return (
