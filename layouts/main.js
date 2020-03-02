@@ -43,8 +43,10 @@ function Layout({ children, title }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <main className="pb-2 md:pb-4 lg:pb-8">{children}</main>
-      <Footer />
+      <main className="min-h-screen">
+        {children}
+        <Footer />
+      </main>
     </>
   );
 }
