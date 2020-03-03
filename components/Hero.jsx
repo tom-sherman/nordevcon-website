@@ -1,45 +1,31 @@
+import EntypoCalendar from "react-entypo-icons/lib/entypo/Calendar";
+
 export default function Hero({ speakers }) {
   return (
-    <section className="p-4 md:p-8 lg:p-12 text-white" id="hero">
+    <section className="p-4 md:p-8 lg:p-12 text-white min-h-screen" id="hero">
       <div className="container mx-auto lg:py-32">
         <p className="text-2xl md:text-4xl lg:text-5xl font-bold">
           NOR(DEV):CON
         </p>
-        <h1 className="text-xl md:text-2xl lg:text-3xl">
+        <h1 className="text-xl md:text-2xl lg:text-3xl text-purple-200">
           Norfolk Developers Conference
         </h1>
         <p className="text-md md:text-xl lg:text-2xl mb-4">
-          26<sup>th</sup> &ndash; 28<sup>th</sup> February 2020
+          24<sup>th</sup> &ndash; 26<sup>th</sup> February 2021
         </p>
-        <h1 className="my-8 md:w-1/2">
-          <strong>nor(DEV):con is back in 2020.</strong> The eastern region's
-          biggest tech conference returns in February with a fantastic line-up
-          of speakers and workshops.
-        </h1>
         <a
-          href="https://www.eventbrite.co.uk/e/nordevcon-2020-tickets-65832042411"
-          className="bg-red-500 block text-center text-white p-3 font-bold mt-4 w-full max-w-sm rounded shadow-lg hover:bg-red-600"
+          href="https://www.google.com/calendar/render?action=TEMPLATE&text=nor(DEV):con+2021&dates=20210224T090000Z/20210226T180000Z&details=Visit+the+website+for+details:+https://nordevcon.com&location=Kings+Centre,+Norwich,+NR1+1PH&sf=true&output=xml"
+          className="bg-white block text-center text-gray-800 p-3 font-bold mt-4 w-full max-w-sm rounded shadow-lg hover:bg-red-600"
         >
-          Buy tickets
+          <EntypoCalendar /> Add to Google calendar
         </a>
-        <div className="flex flex-row content-between text-center w-full mt-12">
-          <div className="flex flex-col w-1/3">
-            <span className="text-xl font-bold lg:text-4xl">
-              {speakers.length}+
-            </span>
-            <span className="text-sm text-gray-500 lg:text-xl">speakers</span>
-          </div>
-          <div className="flex flex-col w-1/3">
-            <span className="text-xl font-bold text-center lg:text-4xl">5</span>
-            <span className="text-sm text-gray-500 lg:text-xl">tracks</span>
-          </div>
-          <div className="flex flex-col w-1/3">
-            <span className="text-xl font-bold text-center lg:text-4xl">
-              40+
-            </span>
-            <span className="text-sm text-gray-500 lg:text-xl">sessions</span>
-          </div>
-        </div>
+        &raquo;{" "}
+        <a
+          href="https://2020.nordevcon.com"
+          className="inline-block underline text-purple-300 mt-2"
+        >
+          Looking for nor(DEV):con 2020?
+        </a>
       </div>
     </section>
   );
