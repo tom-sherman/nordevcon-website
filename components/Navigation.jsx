@@ -1,6 +1,6 @@
 const links = [{ href: "/#hero", label: "Home" }];
 
-export default function Navgation() {
+export function Navigation() {
   return (
     <nav className="bg-white sticky top-0 overflow-x-auto z-40 mt-2">
       <div className="p-4 md:p-6">
@@ -17,3 +17,5 @@ export default function Navgation() {
     </nav>
   );
 }
+
+export default Navigation;
