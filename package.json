@@ -3,24 +3,22 @@
   "version": "1.0.1",
   "scripts": {
     "dev": "next",
-    "build": "next build && next export",
+    "build": "next build",
     "export": "next export",
-    "start": "serve out"
+    "start": "next dev"
   },
   "dependencies": {
     "@reach/dialog": "^0.8.0",
     "@reach/visually-hidden": "^0.8.0",
-    "@zeit/next-css": "^0.2.1-canary.4",
     "axios": "^0.19.0",
     "eslint-plugin-flowtype": "^4.6.0",
-    "next": "latest",
-    "next-offline": "^4.0.6",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@tailwindcss/custom-forms": "^0.2.1",
-    "autoprefixer": "^9.6.5",
+    "autoprefixer": "^10.3.7",
     "babel-eslint": "^10.0.3",
     "cssnano": "^3.10.0",
     "date-fns": "^2.4.1",
@@ -33,9 +31,10 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.1.2",
     "next-purgecss": "^3.1.1",
+    "postcss": "^8.3.9",
     "postcss-easy-import": "^3.0.0",
     "react-entypo-icons": "^1.4.1",
     "serve": "^11.3.0",
-    "tailwindcss": "^1.1.2"
+    "tailwindcss": "^2.2.16"
   }
 }

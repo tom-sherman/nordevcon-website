@@ -1,19 +1,26 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
-  theme:  {
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
     extend: {
+      colors: {
+        orange: colors.orange
+      },
       screens: {
-        'xs': '320px',
+        xs: "320px"
       },
       minWidth: theme => ({
-        'sm': theme('screens.xs'),
+        sm: theme("screens.xs")
       }),
       maxWidth: {
-        '7xl': '80rem',
+        "7xl": "80rem"
       }
     }
   },
-  variants: {},
-  plugins: [
-    require('@tailwindcss/custom-forms'),
-  ]
-}
+  variants: {
+    extend: {}
+  },
+  plugins: [require("@tailwindcss/custom-forms")]
+};
