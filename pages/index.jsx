@@ -76,35 +76,21 @@ function IndexRoute({ speakers, schedule, sponsors }) {
   );
 }
 
-IndexRoute.getInitialProps = async ({ res }) => {
+export async function getStaticProps(context) {
   const [speakers, schedule, sponsors] = await Promise.all([
     airtable.getSpeakers(),
     airtable.getSchedule(),
     airtable.getSponsors()
   ]);
 
-  const etag = require("crypto")
-    .createHash("md5")
-    .update(
-      JSON.stringify({
-        speakers: speakers.data.records,
-        schedule: schedule.data.records,
-        sponsors: sponsors.data.records
-      })
-    )
-    .digest("hex");
-
-  if (res) {
-    res.setHeader("Cache-Control", "s-maxage=60, stale-while-revalidate");
-    res.setHeader("X-version", etag);
-  }
-
   return {
-    speakers: speakers.data.records,
-    schedule: schedule.data.records.reduce(groupByStartDate, {}),
-    sponsors: sponsors.data.records,
-    etag
+    props: {
+      speakers: speakers.data.records,
+      schedule: schedule.data.records.reduce(groupByStartDate, {}),
+      sponsors: sponsors.data.records
+    },
+    revalidate: 60
   };
-};
+}
 
 export default IndexRoute;
