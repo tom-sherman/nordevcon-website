@@ -1,8 +1,10 @@
-# Nor Dev Con 2020 Website
+# Nor Dev Con 2022 Website
 
 The website data for speakers and schedule is sourced from an Airtable spreadsheet via the Airtable API.
 
 ## Installation and development
+
+**In progress 2022 version can be found on the `2022` branch.**
 
 1. Clone the repo
 2. Copy `.env.example` file to `.env`.
