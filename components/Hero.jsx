@@ -11,12 +11,12 @@ export default function Hero({ speakers }) {
           Norfolk Developers Conference
         </h1>
         <p className="text-md md:text-xl lg:text-2xl mb-4">June 2022</p>
-        <a
+        {/* <a
           href="https://www.google.com/calendar/render?action=TEMPLATE&text=nor(DEV):con+2021&dates=20210224T090000Z/20210226T180000Z&details=Visit+the+website+for+details:+https://nordevcon.com&location=Kings+Centre,+Norwich,+NR1+1PH&sf=true&output=xml"
           className="bg-white block text-center text-gray-800 p-3 font-bold mt-4 w-full max-w-sm rounded shadow-lg hover:bg-red-600"
         >
           <EntypoCalendar /> Add to Google calendar
-        </a>
+        </a> */}
         &raquo;{" "}
         <a
           href="https://2020.nordevcon.com"
