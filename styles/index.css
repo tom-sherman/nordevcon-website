@@ -1,70 +1,29 @@
 @tailwind base;
 @tailwind components;
 
-/*
-TODO: Fix Tailwind not working in @import:
-@import "./button.css";
-*/
-.btn {
-  @apply inline-block bg-purple-700 text-white font-bold py-2 px-4 rounded-lg;
-}
-.btn:hover {
-  @apply bg-purple-600;
-}
-.btn:focus {
-  @apply outline-none bg-purple-600;
-}
-
-.btn-lg {
-  @apply py-4 px-8 text-lg;
-}
-
-.btn-blue {
-  @apply bg-blue-500;
-}
-.btn-blue:hover {
-  @apply bg-blue-600;
-}
-.btn-blue:focus {
-  @apply bg-blue-600;
-}
-
-.btn-orange {
-  @apply bg-orange-500;
-}
-.btn-orange:hover {
-  @apply bg-orange-600;
-}
-.btn-orange:focus {
-  @apply bg-orange-600;
-}
-
-input + .btn {
-  @apply rounded-tl-none rounded-bl-none;
-}
-/*
-end @import "./button.css";
-*/
-
 .section {
-  @apply max-w-7xl mx-auto px-3 py-6;
+  @apply max-w-7xl mx-auto p-6 w-full;
 
-  scroll-margin-top: 76px;
+  /* scroll-margin-top: 76px; */
 }
 
 .headline {
-  @apply text-3xl font-bold mb-4;
+  @apply mb-4 text-3xl font-bold leading-relaxed;
 }
 
 @screen md {
   .headline {
-    @apply text-4xl;
+    @apply text-4xl leading-relaxed;
   }
 }
 
 @screen lg {
   .headline {
-    @apply text-5xl;
+    @apply text-5xl leading-relaxed;
+  }
+
+  .section {
+    @apply py-8;
   }
 }
 

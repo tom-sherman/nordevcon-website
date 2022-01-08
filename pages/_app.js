@@ -1,4 +1,6 @@
+import "../styles/button.css";
 import "../styles/index.css";
+import "../styles/hexagons.scss";
 
 import React from "react";
 import App from "next/app";

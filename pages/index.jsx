@@ -25,37 +25,28 @@ const groupByStartDate = (groups, event) => {
 function IndexRoute({ speakers, schedule, sponsors }) {
   return (
     <Layout>
-      <Hero speakers={speakers} />
-      <Navigation />
-
-      <section className="section overflow-hidden" id="speakers">
-        <h2 className="headline">Speakers</h2>
-        <Speakers speakers={speakers} />
-      </section>
+      <Hero />
+      {/*
+        <section className="section overflow-hidden" id="speakers">
+          <h2 className="headline">Speakers</h2>
+          <Speakers speakers={speakers} />
+        </section>
+      */}
 
       <section className="section bg-white" id="schedule">
         <h2 className="headline">Schedule</h2>
+        <p className="mb-8">
+        We'll gather in Norwich to learn, discuss, and network with an eclectic
+          bunch of the best of the East's tech scene, joined by a group of
+          international conference veterans.
+          
+          Talks on language, business, methodology, &amp; blockchain. We're
+          bringing 30 sessions across two days at The Kings' Centre, kicking
+          off on the 16<sup>th</sup> June 2022, and closing 17<sup>th</sup>
+          June 2022
+        </p>
+
         <Schedule schedule={schedule} speakers={speakers} />
-      </section>
-
-      <section className="section" id="workshops">
-        <h2 className="headline">Workshops</h2>
-        <p className="mb-4">
-          Take full advantage of your visit by attending one of our workshops
-          run by a group of experienced speakers and trainers.
-        </p>
-        <p className="mb-4">
-          We'll be exploring topics like shaping business ideas, problem
-          management methodologies and accounting for contractors.
-        </p>
-        <Link href="/workshops">
-          <a className="btn">View workshops</a>
-        </Link>
-      </section>
-
-      <section className="section" id="food">
-        <h2 className="headline">Food</h2>
-        <Food />
       </section>
 
       <section className="section" id="location">

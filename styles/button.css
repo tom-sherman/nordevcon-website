@@ -1,0 +1,37 @@
+.btn {
+  @apply inline-block bg-purple-700 text-white font-bold py-2 px-4 rounded-lg;
+}
+.btn:hover {
+  @apply bg-purple-600;
+}
+.btn:focus {
+  @apply outline-none bg-purple-600;
+}
+
+.btn-lg {
+  @apply py-4 px-8 text-lg;
+}
+
+.btn-blue {
+  @apply bg-blue-500;
+}
+.btn-blue:hover {
+  @apply bg-blue-600;
+}
+.btn-blue:focus {
+  @apply bg-blue-600;
+}
+
+.btn-orange {
+  @apply bg-orange-500;
+}
+.btn-orange:hover {
+  @apply bg-orange-600;
+}
+.btn-orange:focus {
+  @apply bg-orange-600;
+}
+
+input + .btn {
+  @apply rounded-tl-none rounded-bl-none;
+}

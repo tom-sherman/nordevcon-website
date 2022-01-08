@@ -25,12 +25,16 @@ export default function Sponsors({ sponsors }) {
     <div>
       <p className="mb-2">
         The Norfolk Developers Conference wouldn't be possible without the
-        support of our wonderful sponsors. We're really grateful for their trust
-        and support; and are proud to feature them below.
+        support of our wonderful sponsors.
+        
+        {/*
+        We're really grateful for their trust and support; and are proud to
+        feature them below.
+        */}
       </p>
 
       <p className="mb-2">
-        Want to join our community of Sponsors? We stil have a range of&nbsp;
+        Want to join the community of Sponsors? We still have a range of&nbsp;
         <Link href="/sponsorship">
           <a className="text-orange-700 bold underline hover:text-orange-900">
             sponsorship packages available
@@ -40,6 +44,7 @@ export default function Sponsors({ sponsors }) {
       </p>
 
       <ol className="mt-6 lg:-mx-2 lg:flex lg:flex-wrap">
+        {/*
         {sponsors.sort(SponsorSort).map(sponsor => (
           <li
             className="lg:px-2 w-full lg:w-1/4 flex"
@@ -48,6 +53,7 @@ export default function Sponsors({ sponsors }) {
             <Sponsor sponsor={sponsor} />
           </li>
         ))}
+        */}
 
         <li className="lg:px-2 w-full flex">
           <div className="bg-white shadow-lg border mb-4 rounded-lg w-full border flex flex-col overflow-hidden">
