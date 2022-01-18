@@ -34,7 +34,7 @@ export default ({ talks, speakers, tracks, theme }) => {
             key={talk.id}
             className={`cursor-pointer p-2 hover:bg-gray-200 ${
               talks.length > 1
-                ? "mb-2 border-l-8 pl-2 xl:m-0 xl:w-1/5"
+                ? "mb-2 border-l-8 pl-2 xl:m-0 xl:w-1/3"
                 : "border-l-8 w-full"
             }`}
             style={{ borderColor: theme[talk.fields.Track]?.border }}

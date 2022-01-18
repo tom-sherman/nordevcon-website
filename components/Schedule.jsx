@@ -5,9 +5,7 @@ import format from "date-fns/format";
 const Tracks = [
   "Main Auditorium (Track 1)",
   "Conference Room 1 (Track 2)",
-  "Conference Room 2 (Track 3)",
-  "Board Room (Track 4)",
-  "Training Room 1"
+  "Conference Room 2 (Track 3)"
 ];
 
 const Theme = {
@@ -22,14 +20,6 @@ const Theme = {
   "Conference Room 2 (Track 3)": {
     background: "#68d391",
     border: "#68d391"
-  },
-  "Board Room (Track 4)": {
-    background: "#f687b3",
-    border: "#f687b3"
-  },
-  "Training Room 1": {
-    background: "#805ad5",
-    border: "#805ad5"
   }
 };
 

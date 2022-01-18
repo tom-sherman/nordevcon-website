@@ -1,31 +1,37 @@
-import EntypoCalendar from "react-entypo-icons/lib/entypo/Calendar";
-
-export default function Hero({ speakers }) {
+export default function Hero(/* { speakers } */) {
   return (
-    <section className="p-4 md:p-8 lg:p-12 text-white min-h-screen" id="hero">
-      <div className="container mx-auto lg:py-32">
-        <p className="text-2xl md:text-4xl lg:text-5xl font-bold">
-          NOR(DEV):CON
-        </p>
-        <h1 className="text-xl md:text-2xl lg:text-3xl text-purple-200">
-          Norfolk Developers Conference
-        </h1>
-        <p className="text-md md:text-xl lg:text-2xl mb-4">
-          24<sup>th</sup> &ndash; 26<sup>th</sup> February 2021
-        </p>
-        <a
-          href="https://www.google.com/calendar/render?action=TEMPLATE&text=nor(DEV):con+2021&dates=20210224T090000Z/20210226T180000Z&details=Visit+the+website+for+details:+https://nordevcon.com&location=Kings+Centre,+Norwich,+NR1+1PH&sf=true&output=xml"
-          className="bg-white block text-center text-gray-800 p-3 font-bold mt-4 w-full max-w-sm rounded shadow-lg hover:bg-red-600"
-        >
-          <EntypoCalendar /> Add to Google calendar
-        </a>
-        &raquo;{" "}
-        <a
-          href="https://2020.nordevcon.com"
-          className="inline-block underline text-purple-300 mt-2"
-        >
-          Looking for nor(DEV):con 2020?
-        </a>
+    <section className="relative" id="hero">
+      <div className="absolute w-full h-full">
+        <div className="section pt-8 lg:pt-36">
+          <img
+            src="/static/images/nordevcon-logo.png"
+            height="56px"
+            width="320px"
+            alt="nor(DEV):con - The eastern region's biggest tech conference returns in June 2022!"
+            className="mb-8"
+          />
+
+          <h1 className="headline text-indigo-100">
+            <span className="hidden">
+              nor(DEV):con
+            </span>
+            <span>
+              The eastern region's biggest tech conference returns in June 2022!
+            </span>
+          </h1>
+
+          <p className="mt-24 text-purple-300 font-black text-2xl lg:text-4xl">On the 16<sup>th</sup> &amp; 17<sup>th</sup> June 2022</p>
+        </div>
+      </div>
+
+      <div className="hex-grid">
+        <ul className="hex-grid__list">
+          {new Array(8 * 12).fill(null).map((value, key) => (
+            <li key={key} className="hex-grid__item">
+              <div className="hex-grid__content"></div>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

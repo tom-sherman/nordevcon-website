@@ -4,15 +4,15 @@ import Navigation from "../components/Navigation";
 
 const PACKAGES = {
   elite: {
-    price: "£3,300",
+    price: "£5,000",
     title: "Elite",
-    available: false,
+    available: true,
     features: [
       "Logo on website",
       "Logo in opening presentation",
       "Logo in premium position in printed programme",
       "Mentions on twitter",
-      "Table and space for three small banners at the conference",
+      "Table and space for three banners at the conference",
       "Four tickets for the conference",
       "Lunch and refreshments for two people managing the stand",
       "30 minute speaking slot, may be of a sales/marketing nature (all other presentations are strictly technical)",
@@ -23,7 +23,7 @@ const PACKAGES = {
   },
   partner: {
     title: "Partner",
-    price: "£1,600",
+    price: "£2,500",
     available: true,
     features: [
       "Logo on website",
@@ -39,7 +39,7 @@ const PACKAGES = {
   },
   associate: {
     title: "Associate",
-    price: "£275",
+    price: "£500",
     available: true,
     features: [
       "Logo on website",
@@ -73,7 +73,7 @@ const PACKAGES = {
   },
   dinner: {
     title: "Conference Dinner",
-    price: "£2,800",
+    price: "£3,300",
     available: false,
     features: [
       "Five minute introduction before dinner",
@@ -83,7 +83,7 @@ const PACKAGES = {
   },
   roomConference: {
     title: "Thursday 27th & Friday 28th February",
-    price: "from £300",
+    price: "from £500",
     available: true,
     features: [
       "Brand the room",

@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const apiKey = process.env.AIRTABLE_API_KEY;
-const apiBase = "https://api.airtable.com/v0/app4lReXoXZ1NAULm";
+const apiKey = process.env.NEXT_PUBLIC_AIRTABLE_API_KEY;
+const apiBase = "https://api.airtable.com/v0/appngnoiyvyyacD6l";
 
 async function callAPI(endpoint, body = null) {
   try {
