@@ -1,4 +1,4 @@
-$block: '.hex-grid';
+$block: ".hex-grid";
 
 @mixin grid-item($amount) {
   @for $i from 1 through $amount {
@@ -6,7 +6,7 @@ $block: '.hex-grid';
       --amount: #{$amount};
       --i: #{$i};
       grid-column: #{$i + $i - 1} / span 3;
-      
+
       @if $i % 2 == 0 {
         grid-row: calc(var(--counter) + var(--counter) - 1) / span 2;
       }
@@ -26,7 +26,7 @@ $block: '.hex-grid';
 
   &__list {
     --amount: 5;
-    
+
     position: relative;
     display: grid;
     margin: -5% -2.5%;
@@ -42,7 +42,7 @@ $block: '.hex-grid';
 
     height: 0;
     padding-bottom: 90%;
-    
+
     grid-column: 1 / span 3;
     grid-row: calc(var(--counter) + var(--counter)) / span 2;
   }
@@ -56,7 +56,7 @@ $block: '.hex-grid';
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     font-size: 1.125rem;
     text-decoration: none;
     text-align: center;
@@ -65,28 +65,31 @@ $block: '.hex-grid';
     opacity: 0;
 
     clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
-    
+
     transition: opacity 10s ease-out;
     filter: blur(2px);
-    
-    &:hover {
-      opacity: 0.4;
-      transition: opacity 0.4s ease-out;
+
+    @media not all and (prefers-reduced-motion: reduce) {
+      &:hover,
+      &.highlight {
+        opacity: 0.4;
+        transition: opacity 0.4s ease-out;
+      }
     }
   }
 }
 
 // @media screen and (min-width: 1440px) {
-  #{$block} {
-    &__list {
-      --amount: 12;
-      --counter: 1;
-    }
-
-    &__item {
-      @include grid-item(12);
-    }
+#{$block} {
+  &__list {
+    --amount: 12;
+    --counter: 1;
   }
+
+  &__item {
+    @include grid-item(12);
+  }
+}
 // }
 
 // @media screen and (min-width: 1120px) and (max-width: 1439px) {
