@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { useEffect, useState } from "react";
+import { useEffect, useState, startTransition } from "react";
 
 const hexArray = Array.from({length: 8 * 12}).fill(null);
 
@@ -47,7 +47,9 @@ function Hex() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setShouldHighlight(Math.random() > 0.99)
+      startTransition(() => {
+        setShouldHighlight(Math.random() > 0.99)
+      })
     }, 500);
 
     return () => clearInterval(interval)
