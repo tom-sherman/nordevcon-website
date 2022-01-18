@@ -4,17 +4,6 @@ import { useEffect, useState } from "react";
 const hexArray = Array.from({length: 8 * 12}).fill(null);
 
 export default function Hero(/* { speakers } */) {
-  const [highlightedHexes, setHighlightedHexes] = useState([]);
-
-  useEffect(() => {
-    const timeout = setInterval(() => {
-      console.log("fkdhjdkfh")
-      setHighlightedHexes(hexArray.map(() => Math.random() > 0.99))
-    }, 500)
-
-    return () => clearInterval(timeout)
-  }, [])
-
   return (
     <section className="relative" id="hero">
       <div className="absolute w-full h-full">
@@ -43,12 +32,26 @@ export default function Hero(/* { speakers } */) {
       <div className="hex-grid">
         <div className="hex-grid__list">
           {hexArray.map((_, key) => (
-            <div key={key} className={classNames("hex-grid__item", { highlight: highlightedHexes[key] })}>
-              <div className={classNames("hex-grid__content", { highlight: highlightedHexes[key] })}></div>
+            <div key={key} className="hex-grid__item">
+              <Hex />
             </div>
           ))}
         </div>
       </div>
     </section>
   );
+}
+
+function Hex() {
+  const [shouldHightlight, setShouldHighlight] = useState(false)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShouldHighlight(Math.random() > 0.99)
+    }, 500);
+
+    return () => clearInterval(interval)
+  }, [])
+
+  return <div className={classNames("hex-grid__content", { highlight: shouldHightlight })}></div>
 }
