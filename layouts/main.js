@@ -2,9 +2,9 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 
 const description =
-  "The eastern region's biggest tech conference returns February 26-28th with a fantastic line-up of speakers and workshops.";
+  "The eastern region's biggest tech conference returns June 16-17th with a fantastic line-up of speakers and workshops.";
 const imageUrl = "/static/images/nordev.jpg";
-const defaultTitle = "Norfolk Developers Conference 2020";
+const defaultTitle = "Norfolk Developers Conference 2022";
 
 function Layout({ children, title }) {
   function getTitle() {
