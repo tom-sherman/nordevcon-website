@@ -2,9 +2,9 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 
 const description =
-  "The eastern region's biggest tech conference returns February 26-28th with a fantastic line-up of speakers and workshops.";
+  "Talks on language, business, methodology, & blockchain. We're bringing 30 sessions across two days at The Kings' Centre, 16th June to 17th June 2022.";
 const imageUrl = "/static/images/nordev.jpg";
-const defaultTitle = "Norfolk Developers Conference 2020";
+const defaultTitle = "Norfolk Developers Conference 2022";
 
 function Layout({ children, title }) {
   function getTitle() {
