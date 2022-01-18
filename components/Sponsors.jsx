@@ -64,7 +64,7 @@ export default function Sponsors({ sponsors }) {
                 </span>
                 <span className="block text-xl text-orange-800">
                   Support the eastern region's biggest tech conference! Packages
-                  starting at £275.
+                  starting at £500.
                 </span>
               </a>
             </Link>
