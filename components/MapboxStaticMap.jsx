@@ -1,4 +1,4 @@
-const apiKey = process.env.MAPBOX_API_KEY;
+const apiKey = process.env.NEXT_PUBLIC_MAPBOX_API_KEY;
 const theme = "mapbox/dark-v10";
 
 export default function MapboxStaticMap({ lat, lon, size, icon, height, width }) {
