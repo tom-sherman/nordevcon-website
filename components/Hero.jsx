@@ -1,3 +1,8 @@
+import classNames from "classnames";
+import { useEffect, useState, startTransition } from "react";
+
+const hexArray = Array.from({length: 8 * 12}).fill(null);
+
 export default function Hero(/* { speakers } */) {
   return (
     <section className="relative" id="hero">
@@ -25,14 +30,30 @@ export default function Hero(/* { speakers } */) {
       </div>
 
       <div className="hex-grid">
-        <ul className="hex-grid__list">
-          {new Array(8 * 12).fill(null).map((value, key) => (
-            <li key={key} className="hex-grid__item">
-              <div className="hex-grid__content"></div>
-            </li>
+        <div className="hex-grid__list">
+          {hexArray.map((_, key) => (
+            <div key={key} className="hex-grid__item">
+              <Hex />
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );
+}
+
+function Hex() {
+  const [shouldHightlight, setShouldHighlight] = useState(false)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      startTransition(() => {
+        setShouldHighlight(Math.random() > 0.99)
+      })
+    }, 500);
+
+    return () => clearInterval(interval)
+  }, [])
+
+  return <div className={classNames("hex-grid__content", { highlight: shouldHightlight })}></div>
 }

@@ -70,7 +70,8 @@ $block: ".hex-grid";
     filter: blur(2px);
 
     @media not all and (prefers-reduced-motion: reduce) {
-      &:hover {
+      &:hover,
+      &.highlight {
         opacity: 0.4;
         transition: opacity 0.4s ease-out;
       }
