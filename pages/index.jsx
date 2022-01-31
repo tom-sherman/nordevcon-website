@@ -35,15 +35,13 @@ function IndexRoute({ speakers, schedule, sponsors }) {
 
       <section className="section bg-white" id="schedule">
         <h2 className="headline">Schedule</h2>
-        <p className="mb-8">
-        We'll gather in Norwich to learn, discuss, and network with an eclectic
-          bunch of the best of the East's tech scene, joined by a group of
-          international conference veterans.
-          
-          Talks on language, business, methodology, &amp; blockchain. We're
-          bringing 30 sessions across two days at The Kings' Centre, kicking
-          off on the 16<sup>th</sup> June 2022, and closing 17<sup>th</sup>
-          June 2022
+        <p className="mb-8 tracking-wide">
+          We'll gather in Norwich to learn, discuss, and network with an
+          eclectic bunch of the best of the East's tech scene, joined by a group
+          of international conference veterans. Talks on language, business,
+          methodology, &amp; blockchain. We're bringing 30 sessions across two
+          days at The Kings' Centre, kicking off on the 16<sup>th</sup> June
+          2022, and closing 17<sup>th</sup> June 2022
         </p>
 
         <Schedule schedule={schedule} speakers={speakers} />
