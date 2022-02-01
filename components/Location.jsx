@@ -66,7 +66,7 @@ export default function Location() {
         >
           <div className="flex my-6 md:ml-4 lg:ml-24 p-4 bg-white border-purple-600 border-4 border-l-0 border-r-0 md:border-l-4 md:rounded-tl-lg md:rounded-bl-lg">
             <input
-              className="form-input flex-grow border-purple-600 rounded-tr-none rounded-br-none"
+              className="form-input xs:w-1/2 sm:w-1/2 md:flex-grow lg:flex-grow xl:flex-grow border-purple-600 rounded-tr-none rounded-br-none truncate"
               type="text"
               name="saddr"
               placeholder="Enter your location"
