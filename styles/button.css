@@ -12,6 +12,10 @@
   @apply py-4 px-8 text-lg;
 }
 
+.btn-xl {
+  @apply py-8 px-16 text-2xl;
+}
+
 .btn-blue {
   @apply bg-blue-500;
 }
