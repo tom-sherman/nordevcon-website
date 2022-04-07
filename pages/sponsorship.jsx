@@ -120,7 +120,7 @@ function Sponsorship() {
       <section className="section">
         <h2 className="text-xl font-bold">Main Sponsorship Packages</h2>
         <p className="text-gray-600 mb-4">
-          Your chance to be involved in Norfolk Developers Conference 2020.
+          Your chance to be involved in Norfolk Developers Conference 2022.
         </p>
         <div className="flex flex-wrap items-stretch -ml-4 -mr-4">
           <SponsorshipBox sponsorship={PACKAGES.partner} />
