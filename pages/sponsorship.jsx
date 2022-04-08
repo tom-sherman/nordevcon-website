@@ -82,7 +82,7 @@ const PACKAGES = {
     ]
   },
   roomConference: {
-    title: "Thursday 16th & Friday 17th February",
+    title: "Thursday 16th & Friday 17th June",
     price: "from £500",
     available: true,
     features: [
