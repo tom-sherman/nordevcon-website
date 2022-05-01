@@ -1,5 +1,5 @@
 const s3 =
-  "https://norfolkdevelopers.s3.eu-west-2.amazonaws.com/nordevcon-website/images";
+  "https://norfolkdevelopers.s3.eu-west-2.amazonaws.com/nordevcon-website/2022/images";
 
 export default function Sponsor({ sponsor }) {
   return (

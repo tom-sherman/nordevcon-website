@@ -20,7 +20,7 @@ const groupByStartDate = (groups, event) => {
 };
 
 // const s3 =
-//   "https://norfolkdevelopers.s3.eu-west-2.amazonaws.com/nordevcon-website/images";
+//   "https://norfolkdevelopers.s3.eu-west-2.amazonaws.com/nordevcon-website/2022/images";
 
 function IndexRoute({ speakers, schedule, sponsors }) {
   return (
