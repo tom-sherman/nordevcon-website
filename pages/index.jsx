@@ -25,13 +25,13 @@ const groupByStartDate = (groups, event) => {
 function IndexRoute({ speakers, schedule, sponsors }) {
   return (
     <Layout>
+      <Navigation />
       <Hero />
-      {/*
-        <section className="section overflow-hidden" id="speakers">
-          <h2 className="headline">Speakers</h2>
-          <Speakers speakers={speakers} />
-        </section>
-      */}
+
+      <section className="section overflow-hidden" id="speakers">
+        <h2 className="headline">Speakers</h2>
+        <Speakers speakers={speakers} />
+      </section>
 
       <section className="section bg-white" id="schedule">
         <h2 className="headline">Schedule</h2>
