@@ -6,7 +6,7 @@ const PACKAGES = {
   elite: {
     price: "£5,000",
     title: "Elite",
-    available: true,
+    available: false,
     features: [
       "Logo on website",
       "Logo in opening presentation",
@@ -24,7 +24,7 @@ const PACKAGES = {
   partner: {
     title: "Partner",
     price: "£2,500",
-    available: true,
+    available: false,
     features: [
       "Logo on website",
       "Logo in opening presentation",
@@ -91,9 +91,6 @@ const PACKAGES = {
       "Main Auditorium – £1000",
       "Conference Room 1 – £500",
       "Conference Room 2 – £450",
-      "Training Room 1 – £370",
-      "Boardroom 1 – £350",
-      "Charging Room – £300"
     ]
   }
 };
