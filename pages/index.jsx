@@ -27,11 +27,6 @@ function IndexRoute({ speakers, schedule, sponsors }) {
     <Layout>
       <Hero />
 
-      <section className="overflow-hidden section" id="speakers">
-        <h2 className="headline">Speakers</h2>
-        <Speakers speakers={speakers} />
-      </section>
-
       <section className="bg-white section" id="schedule">
         <h2 className="headline">Schedule</h2>
         <p className="mb-8 tracking-wide">
@@ -45,6 +40,17 @@ function IndexRoute({ speakers, schedule, sponsors }) {
 
         <Schedule schedule={schedule} speakers={speakers} />
       </section>
+      
+      <section className="section" id="sponsors">
+        <h2 className="headline">Sponsors</h2>
+        <Sponsors sponsors={sponsors} />
+      </section>
+
+      <section className="overflow-hidden section" id="speakers">
+        <h2 className="headline">Speakers</h2>
+        <Speakers speakers={speakers} />
+      </section>
+
 
       <section className="section" id="location">
         <h2 className="headline">Location</h2>
@@ -54,11 +60,6 @@ function IndexRoute({ speakers, schedule, sponsors }) {
       <section className="section" id="nearby">
         <h2 className="headline">Nearby</h2>
         <Nearby />
-      </section>
-
-      <section className="section" id="sponsors">
-        <h2 className="headline">Sponsors</h2>
-        <Sponsors sponsors={sponsors} />
       </section>
     </Layout>
   );
