@@ -45,11 +45,11 @@ export default ({ talks, speakers, wishlist, addWishlist, tracks, theme, isShari
             style={{ borderColor: theme[talk.fields.Track]?.border }}
           >
             
-            <h3 className={`flex align-center font-bold align-top leading-none${talk.fields.Cancelled ? ' line-through' : ''}`}>
+            <h3 className={`flex align-center justify-between font-bold align-top leading-none${talk.fields.Cancelled ? ' line-through' : ''}`}>
               <span>{talk.fields.Title}</span>
               {(!talk.fields.Info && !isSharing) && (
                 <button
-                  className="ml-2 text-yellow-500 justify-self-end"
+                  className="ml-2 text-yellow-500"
                   onClick={() => addWishlist(talk.id)}
                 >
                   <Star filled={isWishlist} />
