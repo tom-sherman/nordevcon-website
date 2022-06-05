@@ -10,11 +10,11 @@ import Sponsors from "../components/Sponsors";
 import Location from "../components/Location";
 import Food from "../components/Food";
 
-const groupByStartDate = (groups, event) => {
-  let { Start } = event.fields;
+export function groupByStartDate(groups, talk) {
+  let { Start } = talk.fields;
 
   if (groups[Start] == null) groups[Start] = [];
-  groups[Start].push(event);
+  groups[Start].push(talk);
 
   return groups;
 };
@@ -27,12 +27,12 @@ function IndexRoute({ speakers, schedule, sponsors }) {
     <Layout>
       <Hero />
 
-      <section className="section overflow-hidden" id="speakers">
+      <section className="overflow-hidden section" id="speakers">
         <h2 className="headline">Speakers</h2>
         <Speakers speakers={speakers} />
       </section>
 
-      <section className="section bg-white" id="schedule">
+      <section className="bg-white section" id="schedule">
         <h2 className="headline">Schedule</h2>
         <p className="mb-8 tracking-wide">
           We'll gather in Norwich to learn, discuss, and network with an
