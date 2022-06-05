@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Talks from "./Talks";
 import format from "date-fns/format";
+import Star from "./Star";
 
 const ScheduleKey = 'nordev-schedule-wishlist__2022_v1';
 
@@ -75,9 +76,10 @@ export default function({ schedule, speakers, isSharing }) {
           {(wishlist.length > 0 && !isSharing) && (
             <li key="sharing">
               <a
-                className="ml-4 btn"
+                className="flex ml-4 btn"
                 href={"/schedule?" + share.toString()}>
-                View Wishlist
+                View
+                <Star filled={true} />
               </a>
             </li>
           )}
