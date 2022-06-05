@@ -58,7 +58,7 @@ export default function({ schedule, speakers, isSharing }) {
     return (
       <section className="relative">
         <ol className={
-          !isSharing && "flex bg-white py-4 border-b-2 top-0 right-0 z-10 lg:sticky"
+          !isSharing && "flex bg-white py-4 border-b-2 top-0 right-0 z-10 sticky"
         }>
           <ol key="main" className="flex justify-between flex-grow">
             {Object.keys(Theme).map(track => (
