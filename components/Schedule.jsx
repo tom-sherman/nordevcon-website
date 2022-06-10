@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Talks from "./Talks";
 import format from "date-fns/format";
 import Star from "./Star";
+import { groupByStartDate } from "../pages/index";
+
 
 const ScheduleKey = 'nordev-schedule-wishlist__2022_v1';
 
@@ -48,12 +50,16 @@ function useStickyState(defaultValue, key) {
 
 export default function({ schedule, speakers, isSharing }) {
     const [wishlist, setWishlist] = useStickyState([], ScheduleKey);
+    const grouped = schedule.reduce(groupByStartDate, {});
 
     // @TODO: Ensure only 1 item per track can be saved
     const addWishlist = (add) => wishlist.includes(add)
       ? setWishlist(wishlist.filter(id => id !== add))
       : setWishlist([...wishlist, add]);
-    const share = new URLSearchParams(wishlist.map((id) => ['wishlist', id]));
+
+      const share = new URLSearchParams({
+      'share': schedule.filter(talk => wishlist.includes(talk.id)).map(talk => talk.fields.ID)
+    });
 
     return (
       <section className="relative">
@@ -77,7 +83,7 @@ export default function({ schedule, speakers, isSharing }) {
             <li key="sharing">
               <a
                 className="flex ml-4 btn"
-                href={"/schedule?" + share.toString()}>
+                href={"/schedule?" + decodeURI(share.toString())}>
                 View
                 <Star filled={true} />
               </a>
@@ -85,7 +91,7 @@ export default function({ schedule, speakers, isSharing }) {
           )}
         </ol>
         <ol>
-          {Object.keys(schedule)
+          {Object.keys(grouped)
             .sort()
             .map((start, index, dates) => (
               <React.Fragment key={start}>
@@ -107,7 +113,7 @@ export default function({ schedule, speakers, isSharing }) {
 
                   <div className="flex-grow">
                     <Talks
-                      talks={schedule[start]}
+                      talks={grouped[start]}
                       speakers={speakers}
                       wishlist={wishlist}
                       addWishlist={addWishlist}

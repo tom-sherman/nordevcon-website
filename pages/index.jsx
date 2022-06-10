@@ -75,7 +75,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       speakers: speakers.data.records,
-      schedule: schedule.data.records.reduce(groupByStartDate, {}),
+      schedule: schedule.data.records,
       sponsors: sponsors.data.records
     },
     revalidate: 60

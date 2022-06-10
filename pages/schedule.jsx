@@ -5,10 +5,11 @@ import Schedule from "../components/Schedule";
 
 function SharePage({ speakers, schedule }) {
   const { query } = useRouter();
-  const wishlist = [query.wishlist ?? []].flat();
-  const talks = schedule
-    .filter(talk => wishlist.includes(talk.id))
-    .reduce(groupByStartDate, {});
+  const isLegacy = (query.share === undefined && query.wishlist !== undefined)
+  const wishlist = isLegacy
+    ? [query.wishlist ?? []].flat()
+    : query.share === undefined ? [] : query.share.split(',');
+  const talks = schedule.filter(talk => wishlist.includes(isLegacy ? talk.id : `${talk.fields.ID}`))
 
   return (
     <div className="p-4 section">
