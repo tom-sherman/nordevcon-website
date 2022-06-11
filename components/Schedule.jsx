@@ -83,7 +83,7 @@ export default function({ schedule, speakers, isSharing }) {
             <li key="sharing">
               <a
                 className="flex ml-4 btn"
-                href={"/schedule?" + decodeURI(share.toString())}>
+                href={"/schedule?" + decodeURIComponent(share.toString())}>
                 View
                 <Star filled={true} />
               </a>
