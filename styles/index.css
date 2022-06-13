@@ -92,6 +92,7 @@ a {
   bottom: 0;
   left: 0;
   overflow: auto;
+  z-index: 15;
 }
 
 .modal-content p {
