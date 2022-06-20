@@ -8,6 +8,7 @@
     "start": "next dev"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
     "@reach/dialog": "^0.8.0",
     "@reach/visually-hidden": "^0.8.0",
     "axios": "^0.21.2",
