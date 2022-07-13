@@ -77,20 +77,20 @@ function IndexRoute({ speakers, schedule, sponsors }) {
 }
 
 IndexRoute.getInitialProps = async ({ res }) => {
-  console.log('apiKey', process.env.NEXT_PUBLIC_AIRTABLE_API_KEY)
-  // const [speakers, schedule, sponsors] = await Promise.all([
-  //   airtable.getSpeakers(),
-  //   airtable.getSchedule(),
-  //   airtable.getSponsors()
-  // ]);
+  console.log('apiKey', process.env.AIRTABLE_API_KEY)
+  const [speakers, schedule, sponsors] = await Promise.all([
+    airtable.getSpeakers(),
+    airtable.getSchedule(),
+    airtable.getSponsors()
+  ]);
 
   const etag = require("crypto")
     .createHash("md5")
     .update(
       JSON.stringify({
-        speakers: [],
-        schedule: [],
-        sponsors: []
+        speakers: speakers.data.records,
+        schedule: schedule.data.records,
+        sponsors: sponsors.data.records
       })
     )
     .digest("hex");
@@ -101,9 +101,9 @@ IndexRoute.getInitialProps = async ({ res }) => {
   }
 
   return {
-    speakers: [],
-    schedule: [].reduce(groupByStartDate, {}),
-    sponsors: [],
+    speakers: speakers.data.records,
+    schedule: schedule.data.records.reduce(groupByStartDate, {}),
+    sponsors: sponsors.data.records,
     etag
   };
 };
