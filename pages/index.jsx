@@ -77,6 +77,7 @@ function IndexRoute({ speakers, schedule, sponsors }) {
 }
 
 IndexRoute.getInitialProps = async ({ res }) => {
+  console.log('apiKey', process.env.NEXT_PUBLIC_AIRTABLE_API_KEY)
   const [speakers, schedule, sponsors] = await Promise.all([
     airtable.getSpeakers(),
     airtable.getSchedule(),
