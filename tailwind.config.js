@@ -1,19 +1,17 @@
 module.exports = {
-  theme:  {
+  theme: {
     extend: {
       screens: {
-        'xs': '320px',
+        xs: "320px",
       },
-      minWidth: theme => ({
-        'sm': theme('screens.xs'),
+      minWidth: (theme) => ({
+        sm: theme("screens.xs"),
       }),
       maxWidth: {
-        '7xl': '80rem',
-      }
-    }
+        "7xl": "80rem",
+      },
+    },
   },
   variants: {},
-  plugins: [
-    require('@tailwindcss/custom-forms'),
-  ]
-}
+  plugins: [require("@tailwindcss/forms")],
+};
