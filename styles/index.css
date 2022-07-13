@@ -69,8 +69,6 @@ end @import "./button.css";
   }
 }
 
-@tailwind utilities;
-
 html {
   scroll-behavior: smooth;
 }
