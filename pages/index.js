@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <Layout>
       <Hero>
-        <div class="max-w-5xl mx-auto p-8 text-white">
+        <div className="max-w-5xl mx-auto p-8 text-white">
           <div className="max-w-xs pr-4 mb-32">
             <Logo />
           </div>
