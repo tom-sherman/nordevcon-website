@@ -13,7 +13,7 @@ export default function Home() {
             <Logo />
           </div>
 
-          <h1 class="mb-4 text-4xl">
+          <h1 className="mb-4 text-4xl">
             {config.title}
           </h1>
 
