@@ -11,7 +11,7 @@ export default function Hero({ children }) {
         xl:bg-[url('/hero/Hero.jpg')]
       ">
       </div>
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 flex">
         {children}
       </div>
     </div>
