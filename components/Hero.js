@@ -80,7 +80,7 @@ export default function Hero() {
 
         <div>
           <p className="text-4xl font-extrabold tracking-tight text-white">
-            24rd &amp; 24th February 2023
+            23rd &amp; 24th February 2023
           </p>
         </div>
       </div>
