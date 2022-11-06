@@ -2,7 +2,7 @@ import Waves from "./svg/Waves";
 
 export default function Introduction() {
   return (
-    <div className="relative min-h-screen pt-[15vw]">
+    <div className="relative md:min-h-screen pt-[15vw]">
       <div className="absolute z-20 w-full -top-20 lg:-top-28">
         <Waves />
       </div>

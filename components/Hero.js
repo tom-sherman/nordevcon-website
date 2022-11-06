@@ -67,7 +67,7 @@ export default function Hero() {
           <Icon key={`icon_${i}`} />
         ))}
       </div>
-      <div className="z-10 flex flex-col gap-8 p-4 py-16 md:p-16 md:pt-32 md:mb-16">
+      <div className="z-10 flex flex-col gap-8 p-4 py-16 md:p-16 md:pt-32 md:mb-16 lg:mx-auto lg:max-w-7xl">
         <div className="max-w-sm md:max-w-lg">
           <Logo />
         </div>
