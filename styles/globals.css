@@ -7,7 +7,7 @@
   height: var(--size);
   position: absolute;
   opacity: 0;
-  top: 40vh;
+  top: 30vw;
   color: var(--color);
   animation: rise var(--time) linear infinite;
   animation-delay: var(--delay);

@@ -6,8 +6,8 @@ import ChatBubbleLeftRightIcon from "@heroicons/react/24/outline/ChatBubbleLeftR
 import ChartBarSquareIcon from "@heroicons/react/24/outline/ChartBarSquareIcon";
 import CircleStackIcon from "@heroicons/react/24/outline/CircleStackIcon";
 import CommandLineIcon from "@heroicons/react/24/outline/CommandLineIcon";
-import City from "./City";
-import Logo from "./Logo";
+import City from "./svg/City";
+import Logo from "./svg/Logo";
 
 const Count = 15;
 const Icons = [
@@ -61,7 +61,7 @@ function Icon() {
 
 export default function Hero() {
   return (
-    <div className="relative flex flex-col justify-between min-h-screen overflow-hidden bg-slate-900 ">
+    <div className="relative flex flex-col justify-between overflow-hidden lg:min-h-screen bg-slate-900 ">
       <div className="absolute inset-0 text-white">
         {Array.from({ length: Count }, (_, i) => (
           <Icon key={`icon_${i}`} />
@@ -84,7 +84,7 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className="z-10 -ml-24 text-white -mr-96 md:mx-0">
+      <div className="z-30 -ml-24 text-white -mr-96 md:mx-0">
         <City />
       </div>
     </div>

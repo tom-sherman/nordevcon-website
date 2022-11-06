@@ -2,7 +2,6 @@ import * as airtable from "./api/airtable";
 import config from "../config.json";
 import Layout from "../layouts/default";
 import Hero from "../components/Hero";
-import Logo from "../components/Logo";
 
 export default function Home() {
   return (

@@ -37,9 +37,7 @@ export default function Layout({ children, heading = null, hero = null }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <main className="min-h-screen">
-        {children}
-      </main>
+      <main className="min-h-screen bg-blue-50">{children}</main>
     </>
   );
 }
