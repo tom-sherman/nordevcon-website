@@ -2,8 +2,8 @@ import Waves from "./svg/Waves";
 
 export default function Introduction() {
   return (
-    <div className="relative md:min-h-screen pt-[15vw]">
-      <div className="absolute z-20 w-full -top-20 lg:-top-28">
+    <div className="relative pt-[10vw]">
+      <div className="absolute z-20 w-full -top-[5vw]">
         <Waves />
       </div>
 
@@ -14,7 +14,7 @@ export default function Introduction() {
         ></div>
         <div className="relative bg-gray-100 lg:bg-transparent">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:grid lg:grid-cols-2 lg:px-8">
-            <div className="max-w-2xl py-12 mx-auto lg:max-w-none lg:py-64">
+            <div className="max-w-2xl pt-32 pb-12 mx-auto lg:max-w-none lg:pb-32 lg:pt-64">
               <div className="lg:pr-16">
                 <h2 className="mb-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
                   Two days of talks on mobile, web, game, data science,

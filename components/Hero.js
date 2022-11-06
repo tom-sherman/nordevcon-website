@@ -84,7 +84,7 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className="z-30 -ml-24 text-white -mr-96 md:mx-0">
+      <div className="z-30 -ml-24 text-white -mr-96 lg:mx-0">
         <City />
       </div>
     </div>
