@@ -34,14 +34,6 @@ export default function Introduction() {
                   kicking off on the 23rd February 2023, and closing 24th
                   February 2023
                 </p>
-                <div className="mt-6">
-                  <a
-                    href="https://nor.dev/tickets"
-                    className="inline-block px-12 py-4 text-2xl font-extrabold text-white bg-[#945ca3] border border-transparent rounded-md hover:bg-[#4f3956]"
-                  >
-                    Buy Tickets
-                  </a>
-                </div>
               </div>
             </div>
           </div>

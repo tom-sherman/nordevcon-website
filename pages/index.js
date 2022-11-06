@@ -3,6 +3,7 @@ import config from "../config.json";
 import Layout from "../layouts/default";
 import Hero from "../components/Hero";
 import Introduction from "../components/Introduction";
+import Tickets from "../components/Tickets";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
 
       <Introduction />
+      <Tickets />
     </Layout>
   );
 }
