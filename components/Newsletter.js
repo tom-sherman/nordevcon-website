@@ -44,7 +44,7 @@ export default function Example() {
             />
           </svg>
         </div>
-        <div className="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="px-4 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
           <div className="relative px-6 py-10 overflow-hidden rounded-lg shadow-xl bg-slate-900 sm:px-12 sm:py-20">
             <div
               aria-hidden="true"
