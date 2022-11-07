@@ -17,13 +17,13 @@ export default function Introduction() {
             <div className="max-w-2xl pt-32 pb-12 mx-auto lg:max-w-none lg:pb-32 lg:pt-64">
               <div className="lg:pr-16">
                 <h2 className="mb-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
-                  Two days of talks on mobile, web, game, data science,
-                  wellbeing, HR, startups &amp; more.
+                  Two days of talks on mobile, web, game, data science,{" "}
+                  <span className="italic">humans</span>, startups &amp; more.
                 </h2>
                 <p className="mb-2 text-2xl text-slate-900">
                   Topics to interest and enthrall all; in a welcoming and
                   inclusive atmosphere. Friendships to kindle, friends to meet,
-                  & connections to make!.
+                  & connections to make!
                 </p>
 
                 <p className="text-xl text-slate-500">

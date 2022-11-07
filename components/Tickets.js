@@ -1,6 +1,7 @@
 import LightBulbIcon from "@heroicons/react/24/outline/LightBulbIcon";
 import { compareDesc, format, isBefore } from "date-fns";
 import { useEffect, useState } from "react";
+import config from "../config.json";
 
 const Prices = [
   {
@@ -27,17 +28,6 @@ function PriceProvider() {
     isBefore(now, price.expires_at)
   );
 }
-
-const BuyButton = ({ url }) => (
-  <div className="rounded-md shadow">
-    <a
-      href={url}
-      className="flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-gray-800 border border-transparent rounded-md hover:bg-gray-900"
-    >
-      Buy your ticket now
-    </a>
-  </div>
-);
 
 const TicketHero = ({ title, price, description }) => (
   <div className="flex-1 flex-grow px-6 py-8 bg-white sm:p-10 sm:pb-6">
@@ -90,7 +80,7 @@ export default function Tickets() {
             {price ? (
               <>
                 <p className="mt-4 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
-                  Grab your Ticket for 2023 now!
+                  Grab your ticket now!
                 </p>
                 <p className="max-w-4xl mx-auto mt-4 text-xl text-gray-300 sm:mt-5 sm:text-2xl">
                   {price.name} pricing available until{" "}
@@ -123,7 +113,6 @@ export default function Tickets() {
                     "System engineering & DevOps",
                   ]}
                 />
-                <BuyButton url="https://buy.stripe.com/bIY6rOdvUbXzaOY9AC" />
               </div>
             </div>
 
@@ -141,7 +130,6 @@ export default function Tickets() {
                     "Business",
                   ]}
                 />
-                <BuyButton url="https://buy.stripe.com/cN2bM8ajIbXz1eofYZ" />
               </div>
             </div>
           </div>
@@ -161,9 +149,17 @@ export default function Tickets() {
                     "+ Wine reception",
                   ]}
                 />
-                <BuyButton url="https://buy.stripe.com/4gw2by9fE5zbg9i3cf" />
               </div>
             </div>
+          </div>
+
+          <div className="col-span-3">
+            <a
+              href={config.tickets}
+              className="mt-4 flex items-center justify-center px-5 py-3 text-lg font-extrabold text-white bg-[#FA7268] border border-transparent rounded-md lg:text-2xl"
+            >
+              Buy Tickets
+            </a>
           </div>
         </div>
       )}
