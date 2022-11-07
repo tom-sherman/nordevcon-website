@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import Introduction from "../components/Introduction";
 import Tickets from "../components/Tickets";
 import Venue from "../components/Venue";
+import Newsletter from "../components/Newsletter";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Introduction />
       <Tickets />
       <Venue />
+      <Newsletter />
     </Layout>
   );
 }
