@@ -7,7 +7,7 @@ const Prices = [
   {
     name: "Super Early Bird",
     expires_at: new Date(2022, 11, 22),
-    tickets: ["£36", "£63", "£120"],
+    tickets: ["£36", "£63", "£90"],
   },
   {
     name: "Early Bird",
