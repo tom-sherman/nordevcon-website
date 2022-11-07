@@ -156,7 +156,7 @@ export default function Tickets() {
           <div className="col-span-3">
             <a
               href={config.tickets}
-              className="mt-4 flex items-center justify-center px-5 py-3 text-lg font-extrabold text-white bg-[#FA7268] border border-transparent rounded-md lg:text-2xl"
+              className="flex items-center justify-center px-5 py-3 mt-4 text-lg font-extrabold text-white border border-transparent rounded-md bg-wave-pink lg:text-2xl"
             >
               Buy Tickets
             </a>
