@@ -7,11 +7,12 @@ export default function Venue() {
 
       <p className="mb-2 text-2xl text-slate-900">
         We return to the King&apos; Centre in 2023. Their wonderful team support
-        us in bringing the conference to the you, and they make a fantasic
-        sarnie. Located on Kings Street, a{" "}
+        us in bringing the conference to you, and they make a fantasic sarnie.
+        Located on Kings Street, a{" "}
         <a
           href="https://www.youtube.com/watch?v=jEelY9KNlu0&"
           target="_blank"
+          rel="noreferrer"
           className="underline"
         >
           pedestrianised street in Norwich city centre.
