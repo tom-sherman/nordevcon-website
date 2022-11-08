@@ -15,15 +15,15 @@ export default function Venue() {
           rel="noreferrer"
           className="underline"
         >
-          pedestrianised street in Norwich city centre.
-        </a>{" "}
-        The building is accessible, and has a great cafe. A free lunch will be
+          pedestrianised street in Norwich city centre
+        </a>
+        , The building is accessible, and has a great cafe. A free lunch will be
         provided on both days, with coffee &amp; tea available on tap all day.
       </p>
 
       <p className="text-2xl text-slate-900"></p>
 
-      <ol className="grid grid-cols-4 gap-4 py-8">
+      <ol className="grid grid-cols-4 gap-4 pt-8">
         <li className="col-span-2 lg:col-span-1 aspect-w-3 aspect-h-2">
           <img
             className="object-cover rounded-lg shadow-lg"
