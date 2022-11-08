@@ -18,7 +18,8 @@ export default function Venue() {
           pedestrianised street in Norwich city centre
         </a>
         , The building is accessible, and has a great cafe. A free lunch will be
-        provided on both days, with coffee &amp; tea available on tap all day.
+        provided on both days, with pots of coffee &amp; tea available on tap
+        all day.
       </p>
 
       <p className="text-2xl text-slate-900"></p>
