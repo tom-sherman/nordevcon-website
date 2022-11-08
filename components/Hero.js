@@ -68,7 +68,7 @@ export default function Hero() {
         ))}
       </div>
       <div className="z-10 flex flex-col gap-8 p-4 py-16 md:p-16 md:pt-32 md:mb-16 ">
-        <div className="max-w-sm md:max-w-lg">
+        <div className="max-w-sm text-white md:max-w-lg">
           <Logo />
         </div>
 
