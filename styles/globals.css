@@ -34,7 +34,7 @@
 
 .bg-move {
 	background-size: 400% 400%;
-	animation: bg-move 15s ease infinite;
+	animation: bg-move 5s ease infinite;
 }
 
 @keyframes bg-move {
