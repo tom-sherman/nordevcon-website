@@ -73,7 +73,7 @@ export default function Hero() {
         </div>
 
         <div>
-          <p className="inline text-5xl leading-normal tracking-tight text-transparent bg-gradient-to-r from-cyan-400 via-sky-600 to-cyan-600 bg-clip-text font-display bg-move">
+          <p className="inline text-5xl font-extrabold leading-normal tracking-tight text-transparent bg-gradient-to-r from-wave-purple via-wave-pink to-wave-orange bg-clip-text font-display bg-move">
             East Anglia&apos;s biggest tech conference
           </p>
         </div>
