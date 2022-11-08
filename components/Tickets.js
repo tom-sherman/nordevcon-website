@@ -6,17 +6,17 @@ import config from "../config.json";
 const Prices = [
   {
     name: "Super Early Bird",
-    expires_at: new Date(2022, 11, 22),
+    expires_at: new Date(2022, 10, 22),
     tickets: ["£36", "£63", "£90"],
   },
   {
     name: "Early Bird",
-    expires_at: new Date(2023, 1, 22),
+    expires_at: new Date(2023, 0, 22),
     tickets: ["£63", "£126", "£210"],
   },
   {
     name: "Standard",
-    expires_at: new Date(2023, 2, 22),
+    expires_at: new Date(2023, 1, 22),
     tickets: ["£90", "£180", "£300"],
   },
 ];
