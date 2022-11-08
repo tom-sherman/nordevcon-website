@@ -6,6 +6,7 @@ import Introduction from "../components/Introduction";
 import Tickets from "../components/Tickets";
 import Venue from "../components/Venue";
 import Newsletter from "../components/Newsletter";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Tickets />
       <Venue />
       <Newsletter />
+      <Footer />
     </Layout>
   );
 }
