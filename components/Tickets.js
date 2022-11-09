@@ -80,7 +80,7 @@ export default function Tickets() {
             {price ? (
               <>
                 <p className="mt-4 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
-                  Grab your ticket now!
+                  Crab your ticket now!
                 </p>
                 <p className="max-w-4xl mx-auto mt-4 text-xl text-gray-300 sm:mt-5 sm:text-2xl">
                   {price.name} pricing available until{" "}
