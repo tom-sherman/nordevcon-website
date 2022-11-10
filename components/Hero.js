@@ -8,6 +8,7 @@ import CircleStackIcon from "@heroicons/react/24/outline/CircleStackIcon";
 import CommandLineIcon from "@heroicons/react/24/outline/CommandLineIcon";
 import City from "./svg/City";
 import Logo from "./svg/Logo";
+import Crab from "./svg/Crab";
 
 const Count = 15;
 const Icons = [
@@ -19,6 +20,7 @@ const Icons = [
   ChartBarSquareIcon,
   CircleStackIcon,
   CommandLineIcon,
+  Crab,
 ];
 
 function random(max, min = 0) {
