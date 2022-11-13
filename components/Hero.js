@@ -45,12 +45,12 @@ function randomStyles() {
   return { size, hue, time, delay, start, end, icon };
 }
 
-function Icon({ size, hue, time, delay, start, end, icon }) {
+function Icon({ size, hue, time, delay, start, end, icon, click }) {
   let IconComponent = Icons[icon];
 
   return (
     <div
-      className="rise"
+      className="rise cursor-crosshair"
       style={{
         "--size": `${size}vh`,
         "--x-start": `${start[0]}vw`,
@@ -62,6 +62,7 @@ function Icon({ size, hue, time, delay, start, end, icon }) {
         "--color": `hsl(${hue}deg 65% 70% / 70%)`,
         "--shadow": `hsl(${hue}deg 65% 50% / 50%)`,
       }}
+      onClick={click}
     >
       <IconComponent />
     </div>
@@ -70,19 +71,57 @@ function Icon({ size, hue, time, delay, start, end, icon }) {
 
 export default function Hero() {
   let [icons, setIcons] = useState([]);
+  let [count, setCount] = useState(0);
 
   useEffect(() => {
     setIcons(Array.from({ length: Count }, () => randomStyles()));
   }, []);
 
   return (
-    <div className="relative flex flex-col justify-between overflow-hidden lg:min-h-screen bg-slate-900 ">
+    <div className="relative flex flex-col justify-between overflow-hidden lg:min-h-screen bg-slate-900">
+      {count > 0 && (
+        <div className="absolute top-0 right-0 p-4 text-5xl font-extrabold text-yellow-500">
+          <p>{count}</p>
+        </div>
+      )}
+
+      {count >= 99 && (
+        <div className="absolute inset-0 z-50 flex flex-col justify-center p-4 text-center text-white bg-opacity-90 bg-slate-900">
+          <div className="max-w-5xl mx-auto">
+            {/*
+             * You are a cheater - well done ;)
+             */}
+            <h2 className="mb-4 text-4xl font-extrabold">
+              &quot;Congratulations&quot;!
+            </h2>
+
+            <p className="mb-8 text-xl">
+              For your perservance you&apos;ve unlocked a discount! Use the code{" "}
+              <span className="font-bold">clicky-mcclickface</span> at checkout
+              to get a 10% discount on any purchase. Or click the big red button
+              below!
+            </p>
+
+            <a
+              href="https://ti.to/norfolkdevelopers/nordevcon-23/discount/clicky-mcclickface"
+              className="block p-4 text-xl font-extrabold bg-red-500 rounded"
+            >
+              Claim my 10% discount
+            </a>
+          </div>
+        </div>
+      )}
+
       <div className="absolute inset-0 text-white">
         {icons.map((styles, i) => (
-          <Icon key={`icon_${i}`} {...styles} />
+          <Icon
+            key={`icon_${i}`}
+            click={() => setCount(() => count + 1)}
+            {...styles}
+          />
         ))}
       </div>
-      <div className="z-10 flex flex-col gap-8 p-4 py-16 md:p-16 md:pt-32 md:mb-16 ">
+      <div className="z-10 flex flex-col gap-8 p-4 py-16 pointer-events-none select-none md:p-16 md:pt-32 md:mb-16 ">
         <div className="max-w-sm text-white md:max-w-lg">
           <Logo />
         </div>
@@ -99,7 +138,7 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className="z-30 -ml-24 text-white -mr-96 lg:mx-0">
+      <div className="z-30 -ml-24 text-white pointer-events-none -mr-96 lg:mx-0">
         <City />
       </div>
     </div>
