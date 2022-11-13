@@ -9,6 +9,7 @@ import CommandLineIcon from "@heroicons/react/24/outline/CommandLineIcon";
 import City from "./svg/City";
 import Logo from "./svg/Logo";
 import Crab from "./svg/Crab";
+import { useEffect, useState } from "react";
 
 const Count = 15;
 const Icons = [
@@ -27,7 +28,7 @@ function random(max, min = 0) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function Icon() {
+function randomStyles() {
   let size = random(5, 2);
   let hue = random(360);
   let time = random(5000, 2000);
@@ -39,7 +40,13 @@ function Icon() {
     random(start[1] - 40, start[1] - 20),
   ];
 
-  let IconComponent = Icons[random(Icons.length - 1, 0)];
+  let icon = random(Icons.length - 1, 0);
+
+  return { size, hue, time, delay, start, end, icon };
+}
+
+function Icon({ size, hue, time, delay, start, end, icon }) {
+  let IconComponent = Icons[icon];
 
   return (
     <div
@@ -62,11 +69,17 @@ function Icon() {
 }
 
 export default function Hero() {
+  let [icons, setIcons] = useState([]);
+
+  useEffect(() => {
+    setIcons(Array.from({ length: Count }, () => randomStyles()));
+  }, []);
+
   return (
     <div className="relative flex flex-col justify-between overflow-hidden lg:min-h-screen bg-slate-900 ">
       <div className="absolute inset-0 text-white">
-        {Array.from({ length: Count }, (_, i) => (
-          <Icon key={`icon_${i}`} />
+        {icons.map((styles, i) => (
+          <Icon key={`icon_${i}`} {...styles} />
         ))}
       </div>
       <div className="z-10 flex flex-col gap-8 p-4 py-16 md:p-16 md:pt-32 md:mb-16 ">
