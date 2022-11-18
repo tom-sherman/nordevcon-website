@@ -1,32 +1,17 @@
 const apiKey = process.env.NEXT_PUBLIC_AIRTABLE_API_KEY;
-const apiBase = "https://api.airtable.com/v0/appngnoiyvyyacD6l";
+const apiBase = "https://api.airtable.com/v0/appsFsySYgjKqDoLu";
 
-async function callAPI(endpoint, body = null) {
-  const url = `${apiBase}${endpoint}?api_key=${apiKey}&limit=100`;
-
-  let fetcher = (body == null)
-    ? fetch(url)
-    : fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(body)
-    })
-
-  return fetcher
-    .then(res => res.json())
-    .then(json => json.data ? json.data.records : [])
-}
-
-export async function getSpeakers() {
-  return callAPI("/Speakers");
+async function get(endpoint, body = null) {
+  return fetch(`${apiBase}${endpoint}`, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+    },
+  })
+    .then((res) => res.json())
+    .then((json) => json.records);
 }
 
 export async function getSchedule() {
-  return callAPI("/Schedule");
-}
-
-export async function getSponsors() {
-  return callAPI("/Sponsors");
+  return get("/Schedule");
 }

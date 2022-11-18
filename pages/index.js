@@ -7,14 +7,16 @@ import Tickets from "../components/Tickets";
 import Venue from "../components/Venue";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import Schedule from "../components/Schedule";
 
-export default function Home() {
+export default function Home({ schedule }) {
   return (
     <Layout>
       <Hero />
 
       <Introduction />
       <Tickets />
+      <Schedule data={schedule} />
       <Venue />
       <Newsletter />
       <Footer />
@@ -23,17 +25,11 @@ export default function Home() {
 }
 
 export async function getStaticProps() {
-  const [speakers, schedule, sponsors] = await Promise.all([
-    airtable.getSpeakers(),
-    airtable.getSchedule(),
-    airtable.getSponsors(),
-  ]);
+  const [schedule] = await Promise.all([airtable.getSchedule()]);
 
   return {
     props: {
-      speakers: speakers,
-      schedule: schedule,
-      sponsors: sponsors,
+      schedule,
     },
     revalidate: 60,
   };
