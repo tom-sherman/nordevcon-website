@@ -15,3 +15,7 @@ async function get(endpoint, body = null) {
 export async function getSchedule() {
   return get("/Schedule");
 }
+
+export async function getSponsors() {
+  return get("/Sponsors");
+}
