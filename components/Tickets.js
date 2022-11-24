@@ -12,7 +12,7 @@ const Prices = [
   {
     name: "Early Bird",
     expires_at: new Date(2023, 0, 22),
-    tickets: ["£63", "£126", "£210"],
+    tickets: ["£72", "£126", "£180"],
   },
   {
     name: "Standard",
