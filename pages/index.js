@@ -9,6 +9,7 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import Schedule from "../components/Schedule";
 import Sponsors from "../components/Sponsors";
+import DiscordCard from "../components/DiscordCard";
 
 export default function Home({ schedule, sponsors }) {
   return (
@@ -20,6 +21,7 @@ export default function Home({ schedule, sponsors }) {
       <Schedule data={schedule} />
       <Sponsors data={sponsors} />
       <Venue />
+      <DiscordCard />
       <Newsletter />
       <Footer />
     </Layout>
