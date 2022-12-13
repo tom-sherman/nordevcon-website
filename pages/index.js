@@ -1,5 +1,4 @@
 import * as airtable from "./api/airtable";
-import config from "../config.json";
 import Layout from "../layouts/default";
 import Hero from "../components/Hero";
 import Introduction from "../components/Introduction";

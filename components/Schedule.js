@@ -1,11 +1,11 @@
 // import Talks from "./Talks";
 import format from "date-fns/format";
-import { useState } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import { useStickyState } from "../lib/helpers";
 import { parseSchedule, Tracks } from "../lib/schedule";
 import Star from "./svg/Star";
-
-const ScheduleKey = "nordev-schedule-wishlist__2023_v1";
+import config from "../config.json";
 
 function Nav() {
   return (
@@ -25,18 +25,17 @@ function Nav() {
   );
 }
 
-function Wishlist({ wishlist }) {
+function Wishlist({ wishlist, share }) {
   if (wishlist.length === 0) return;
 
   return (
     <div>
-      <a
-        className="flex ml-4 btn"
-        href={"/schedule?" + decodeURIComponent(share.toString())}
-      >
-        View
-        <Star filled={true} />
-      </a>
+      <Link legacyBehavior href={"/schedule?" + decodeURIComponent(share)}>
+        <a className="flex px-4 py-2 ml-4 font-bold text-white rounded-md bg-wave-purple">
+          View
+          <Star filled={true} />
+        </a>
+      </Link>
     </div>
   );
 }
@@ -101,7 +100,7 @@ function Talks({ talks, stars, isSharing }) {
                   }`}
                 >
                   <span className="leading-6">{talk.Title}</span>
-                  {!isSharing && talk.Title && (
+                  {!isSharing && talk.Title && talk.Track && (
                     <button
                       className="ml-2 text-yellow-500"
                       onClick={() => addWishlist(talk.id)}
@@ -125,21 +124,20 @@ function Talks({ talks, stars, isSharing }) {
   );
 }
 
-export default function Schedule({ data, isSharing = false }) {
+export default function Schedule({ data, filter = [], isSharing = false }) {
+  const schedule = parseSchedule(data, filter);
+
+  const ScheduleKey = config.schedule_key;
   const [wishlist, setWishlist] = useStickyState([], ScheduleKey);
-  const schedule = parseSchedule(data);
+  const share = new URLSearchParams({
+    share: wishlist,
+  });
 
   // @TODO: Ensure only 1 item per track can be saved
   const addWishlist = (add) =>
     wishlist.includes(add)
       ? setWishlist(wishlist.filter((id) => id !== add))
       : setWishlist([...wishlist, add]);
-
-  const share = new URLSearchParams({
-    share: schedule
-      .filter((talk) => wishlist.includes(talk.id))
-      .map((talk) => talk.fields.ID),
-  });
 
   return (
     <section className="relative px-4 pt-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:pt-20">
@@ -150,7 +148,8 @@ export default function Schedule({ data, isSharing = false }) {
         }
       >
         <Nav />
-        <Wishlist wishlist={wishlist} />
+
+        {!isSharing && <Wishlist wishlist={wishlist} share={share} />}
       </ol>
       <ol>
         {schedule.map((day, i) => (
