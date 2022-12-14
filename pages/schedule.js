@@ -1,10 +1,8 @@
 import * as airtable from "./api/airtable";
-import { useRouter } from "next/router";
 import Layout from "../layouts/default";
 import Schedule from "../components/Schedule";
 
-export default function SchedulePage({ schedule }) {
-  const { query } = useRouter();
+export default function SchedulePage({ schedule, query }) {
   const filter = query.share?.split(",") ?? [];
 
   return (
@@ -14,13 +12,14 @@ export default function SchedulePage({ schedule }) {
   );
 }
 
-export async function getStaticProps() {
-  const schedule = await airtable.getSchedule();
+export async function getServerSideProps({ query }) {
+  const cache = typeof caches !== "undefined" ? caches?.default : undefined;
+  const schedule = await airtable.getSchedule(cache);
 
   return {
     props: {
       schedule,
+      query
     },
-    revalidate: 60,
   };
 }
